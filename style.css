@@ -47,7 +47,10 @@ footer {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 100%; /* Take the full width of the parent (main) */
+    width: calc(100% - 40px); /* Account for main's padding (20px left + 20px right) */
+    max-width: 500px; /* Match the max-width of .category buttons on mobile */
+    margin-left: auto; /* Center the section */
+    margin-right: auto; /* Center the section */
     box-sizing: border-box; /* Ensure padding doesn't increase width */
 }
 
@@ -157,6 +160,11 @@ footer {
         width: 100%; /* Full width of grid cell */
         max-width: none; /* Remove max-width constraint */
         height: 120px;
+    }
+
+    .intro {
+        width: 100%; /* Reset to full width on tablet */
+        max-width: none; /* Remove max-width constraint */
     }
 }
 
