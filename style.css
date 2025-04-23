@@ -47,10 +47,7 @@ footer {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: calc(100% - 40px); /* Account for main's padding (20px left + 20px right) */
-    max-width: 500px; /* Match the max-width of .category buttons on mobile */
-    margin-left: auto; /* Center the section */
-    margin-right: auto; /* Center the section */
+    width: 100%; /* Take the full width of the parent (main) */
     box-sizing: border-box; /* Ensure padding doesn't increase width */
 }
 
@@ -160,11 +157,6 @@ footer {
         width: 100%; /* Full width of grid cell */
         max-width: none; /* Remove max-width constraint */
         height: 120px;
-    }
-
-    .intro {
-        width: 100%; /* Reset to full width on tablet */
-        max-width: none; /* Remove max-width constraint */
     }
 }
 
@@ -285,14 +277,14 @@ details[open] .item-content {
     background-color: #c0c0c0;
     padding: 10px;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto; /* Center the scripture block */
+    margin-right: auto; /* Center the scripture block */
     border-radius: 5px;
     display: flex;
     justify-content: center !important;
     text-align: center !important;
     font-style: italic !important;
-    width: 100%; /* Ensure it takes the full width of its container */
+    width: 100%; /* Take the full width of its container */
     max-width: 500px; /* Match the category button width on mobile */
     box-sizing: border-box;
 }
