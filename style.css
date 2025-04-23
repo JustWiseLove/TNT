@@ -69,7 +69,7 @@ footer {
 
 .category-group {
     margin: 20px 0;
-    padding: 20px;
+    padding: 10px; /* Reduced padding from 20px to 10px */
     background-color: #e0e0e0;
     border-radius: 8px;
     border: 1px solid #d3d3d3;
@@ -105,7 +105,7 @@ footer {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    justify-items: center; /* Center items horizontally */
+    justify-items: stretch; /* Changed from center to stretch to allow full width */
 }
 
 .category {
@@ -114,10 +114,10 @@ footer {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
-    width: 98%; /* Increased width for mobile */
-    max-width: none; /* Remove max-width constraint to stretch wider */
+    width: 100%; /* Changed to 100% to match the width of the h2 border */
+    max-width: none;
     box-sizing: border-box;
-    height: 80px; /* Reduced height for mobile */
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,13 +136,13 @@ footer {
 
 .category h3 {
     font-family: 'Audiowide', sans-serif;
-    margin: 0 0 5px; /* Reduced margin to fit in smaller height */
-    font-size: 18px; /* Reduced font size to fit better */
+    margin: 0 0 5px;
+    font-size: 20px; /* Increased from 18px to 20px */
 }
 
 .category p {
     margin: 0;
-    font-size: 12px; /* Reduced font size to fit better */
+    font-size: 14px; /* Increased from 12px to 14px */
 }
 
 /* Tablet layout (min-width: 768px) */
@@ -153,17 +153,17 @@ footer {
     }
 
     .category {
-        width: 100%; /* Full width of grid cell */
-        max-width: none; /* Remove max-width constraint */
-        height: 100px; /* Reduced height for tablet */
+        width: 100%;
+        max-width: none;
+        height: 100px;
     }
 
     .category h3 {
-        font-size: 20px; /* Slightly larger font for tablet */
+        font-size: 22px; /* Slightly larger for tablet */
     }
 
     .category p {
-        font-size: 14px; /* Restore original font size for tablet */
+        font-size: 16px; /* Slightly larger for tablet */
     }
 }
 
@@ -176,7 +176,7 @@ footer {
     /* For groups with 2 categories */
     .category-group:has(.categories > .category:nth-child(2):nth-last-child(1)) .categories {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 600px; /* Limit width to keep it centered */
+        max-width: 600px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -184,21 +184,21 @@ footer {
     /* For groups with 4 categories */
     .category-group:has(.categories > .category:nth-child(4):nth-last-child(1)) .categories {
         grid-template-columns: repeat(4, 1fr);
-        max-width: 1200px; /* Full width for 4 categories */
+        max-width: 1200px;
     }
 
     .category {
         width: 100%;
         max-width: none;
-        height: 100px; /* Reduced height for desktop */
+        height: 100px;
     }
 
     .category h3 {
-        font-size: 20px; /* Consistent font size for desktop */
+        font-size: 22px;
     }
 
     .category p {
-        font-size: 14px; /* Consistent font size for desktop */
+        font-size: 16px;
     }
 }
 
@@ -299,6 +299,8 @@ details[open] .item-content {
     justify-content: center !important;
     text-align: center !important;
     font-style: italic !important;
+    width: 100%; /* Match the width of the category buttons */
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
 }
 
 .scripture p {
