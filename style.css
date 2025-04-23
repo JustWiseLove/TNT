@@ -114,10 +114,10 @@ footer {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
-    width: 95%; /* 95% width for mobile */
-    max-width: 500px;
+    width: 98%; /* Increased width for mobile */
+    max-width: none; /* Remove max-width constraint to stretch wider */
     box-sizing: border-box;
-    height: 100px;
+    height: 80px; /* Reduced height for mobile */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,12 +136,13 @@ footer {
 
 .category h3 {
     font-family: 'Audiowide', sans-serif;
-    margin: 0 0 10px;
+    margin: 0 0 5px; /* Reduced margin to fit in smaller height */
+    font-size: 18px; /* Reduced font size to fit better */
 }
 
 .category p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px; /* Reduced font size to fit better */
 }
 
 /* Tablet layout (min-width: 768px) */
@@ -154,7 +155,15 @@ footer {
     .category {
         width: 100%; /* Full width of grid cell */
         max-width: none; /* Remove max-width constraint */
-        height: 120px;
+        height: 100px; /* Reduced height for tablet */
+    }
+
+    .category h3 {
+        font-size: 20px; /* Slightly larger font for tablet */
+    }
+
+    .category p {
+        font-size: 14px; /* Restore original font size for tablet */
     }
 }
 
@@ -181,7 +190,15 @@ footer {
     .category {
         width: 100%;
         max-width: none;
-        height: 120px;
+        height: 100px; /* Reduced height for desktop */
+    }
+
+    .category h3 {
+        font-size: 20px; /* Consistent font size for desktop */
+    }
+
+    .category p {
+        font-size: 14px; /* Consistent font size for desktop */
     }
 }
 
