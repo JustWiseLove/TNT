@@ -77,15 +77,15 @@ footer {
     border: 1px solid #d3d3d3;
 }
 
-.category-group h2 {
+.category-group h3 {
     font-family: 'Audiowide', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
-    border-bottom: 2px solid #333;
     padding-bottom: 5px;
     text-align: center;
 }
+
 
 .category-group:nth-child(odd) {
     background-color: #e8e8e8;
