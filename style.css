@@ -47,6 +47,10 @@ footer {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
+    width: 100%; /* Match the width of .categories */
+    max-width: 1200px; /* Match the max-width of .categories */
+    margin-left: auto; /* Center the section */
+    margin-right: auto; /* Center the section */
 }
 
 .intro h2 {
