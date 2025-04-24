@@ -79,6 +79,32 @@ footer {
     margin-right: auto;
 }
 
+/* Add media query for mobile devices (below 768px) */
+@media (max-width: 767px) {
+    .intro {
+        width: 100%; /* Fit within the parent container (main) */
+        position: static; /* Remove the positioning trick */
+        left: auto;
+        right: auto;
+        margin-left: 0; /* Reset margins */
+        margin-right: 0;
+    }
+
+    .intro h2,
+    .intro .scripture,
+    .intro .item,
+    .item-button,
+    .item-content {
+        max-width: 100%; /* Allow content to take full width of .intro */
+        padding: 0 10px; /* Add small padding for better spacing */
+        box-sizing: border-box;
+    }
+
+    .intro h2 {
+        font-size: 20px; /* Slightly smaller heading for mobile */
+    }
+}
+
 .featured-articles {
     margin-bottom: 40px;
 }
