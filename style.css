@@ -181,8 +181,8 @@ footer {
 .category h3 {
     font-family: 'Audiowide', sans-serif;
     margin: 0 0 10px;
-    color: #ffffff;
-    text-shadow: 0 0 5px #ffffff;
+    color: #a0a0a0; /* Medium gray for better readability */
+    text-shadow: 0 0 5px #ffffff; /* White glow */
 }
 
 .category p {
