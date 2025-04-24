@@ -41,6 +41,23 @@ footer {
 }
 
 .intro {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    border: 1px solid #333333;
+}
+
+.intro h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/*.intro {
     text-decoration: none !important;
     text-align: center;
     background-color: #d3d3d3;
@@ -55,7 +72,7 @@ footer {
     font-family: 'Audiowide', sans-serif;
     text-decoration: none !important;
     color: #333;
-}
+}*/
 
 .featured-articles {
     margin-bottom: 40px;
