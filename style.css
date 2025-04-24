@@ -46,6 +46,13 @@ footer {
     background-color: #e0e0e0;
     border-radius: 8px;
     border: 1px solid #333333;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    text-align: center;
 }
 
 .intro h2 {
@@ -57,22 +64,20 @@ footer {
     text-align: center;
 }
 
-/*.intro {
-    text-decoration: none !important;
-    text-align: center;
-    background-color: #d3d3d3;
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
+.intro h2,
+.intro .scripture,
+.intro .item {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.intro h2 {
-    font-family: 'Audiowide', sans-serif;
-    text-decoration: none !important;
-    color: #333;
-}*/
+.item-button,
+.item-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .featured-articles {
     margin-bottom: 40px;
@@ -127,8 +132,7 @@ footer {
     margin-right: auto;
 }
 
-.category,
-.intro {
+.category {
     background-color: #d3d3d3;
     padding: 10px;
     border-radius: 8px;
@@ -136,9 +140,6 @@ footer {
     width: 100%;
     box-sizing: border-box;
     max-width: 400px;
-}
-
-.category {
     transition: transform 0.3s;
     height: 100px;
     display: flex;
@@ -154,12 +155,8 @@ footer {
         justify-items: center;
     }
 
-    .category,
-    .intro {
-        max-width: 400px;
-    }
-
     .category {
+        max-width: 400px;
         height: 120px;
     }
 }
@@ -171,8 +168,14 @@ footer {
     }
 
     .category-group:nth-child(1) .categories,
+    .category-group:nth-child(6) .categories {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .category-group:nth-child(2) .categories,
-    .category-group:nth-child(6) .categories,
     .category-group:nth-child(7) .categories {
         grid-template-columns: repeat(2, 1fr);
         max-width: 480px;
@@ -180,12 +183,8 @@ footer {
         margin-right: auto;
     }
 
-    .category,
-    .intro {
-        max-width: 400px;
-    }
-
     .category {
+        max-width: 350px;
         height: 120px;
     }
 }
