@@ -242,11 +242,15 @@ main {
     text-align: center;
 }
 
-.item-content h3 {
-    margin: 30px 0 20px 0; /* Increased top and bottom margins for better spacing */
-    font-family: 'Audiowide', sans-serif; /* Match the font used elsewhere for consistency */
-    color: #2a6626; /* Match the green color used in headings like .intro h2 */
-    font-size: 1.5em; /* Slightly larger font size for emphasis */
+.items-container .item-content h3 {
+    margin-top: 40px; /* Increased top margin for more space above */
+    margin-bottom: 25px; /* Space below the header */
+    margin-left: 0; /* Reset default margins */
+    margin-right: 0;
+    font-family: 'Audiowide', sans-serif;
+    color: #2a6626;
+    font-size: 1.5em;
+    text-transform: uppercase; /* Matches the all-caps style in the screenshot */
 }
 
 .scripture {
