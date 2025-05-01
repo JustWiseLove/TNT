@@ -210,6 +210,13 @@ main {
 .category[data-gradient="15"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
 .category[data-gradient="16"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
 
+.item {
+    margin-bottom: 20px; /* Adds vertical spacing between each item */
+    max-width: 800px; /* Matches the max-width of other centered elements like .scripture */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .item-button {
     display: block;
     width: 100%;
