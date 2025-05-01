@@ -247,7 +247,7 @@ main {
     margin-bottom: 25px; /* Space below the header */
     margin-left: 0; /* Reset default margins */
     margin-right: 0;
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', sans-serif !important;
     color: #2a6626;
     font-size: 1.5em;
     text-transform: uppercase; /* Matches the all-caps style in the screenshot */
