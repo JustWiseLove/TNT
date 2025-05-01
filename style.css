@@ -242,22 +242,6 @@ main {
     text-align: center;
 }
 
-.item-content h2 {
-    display: block; /* Ensures the h2 behaves as a block-level element */
-    margin-top: 40px; /* Adequate space above the header */
-    margin-bottom: 15px; /* A little space below the header */
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'Audiowide', sans-serif !important; /* Ensure Audiowide font applies */
-    color: #2a6626; /* Matches your green color scheme */
-    font-size: 1.5em; /* Matches the size you wanted */
-    text-transform: uppercase; /* Matches the all-caps style in the screenshot */
-}
-
-.item-content h2:first-of-type {
-    margin-top: 20px; /* Less space for the first header within each .item-content */
-}
-
 .item-content p strong {
     display: block; /* Makes the <strong> element a block-level element to respect margins */
     margin-top: 40px; /* Adequate space above the header */
