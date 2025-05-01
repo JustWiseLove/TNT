@@ -101,7 +101,7 @@ main {
 }
 
 .intro {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
     padding: 20px 0;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -163,6 +163,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Restored original green gradient */
 }
 
 .category:hover {
@@ -192,24 +193,6 @@ main {
     color: #f0f0f0;
 }
 
-/* Gradients for categories using the header's green gradient */
-.category[data-gradient="1"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="2"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="3"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="4"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="5"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="6"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="7"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="8"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="9"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="10"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="11"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="12"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="13"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="14"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="15"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-.category[data-gradient="16"] { background: linear-gradient(135deg, #2a6626, #6b9e31); }
-
 .item {
     margin-bottom: 20px; /* Adds vertical spacing between each item */
     max-width: 800px; /* Matches the max-width of other centered elements like .scripture */
@@ -237,7 +220,7 @@ main {
 
 .item-content {
     padding: 20px;
-    background: #e8f5e9;
+    background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
     border-radius: 0 0 5px 5px;
     text-align: center;
 }
