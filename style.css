@@ -250,6 +250,7 @@ main {
     font-style: italic;
     color: #fff;
     max-width: 800px;
+    text-align: center;
 }
 
 footer {
