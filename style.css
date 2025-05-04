@@ -5,14 +5,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f2f0;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(135deg, #2a6626, #6b9e31);
+    background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -23,8 +23,13 @@ header {
     z-index: 100;
 }
 
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
 .logo h1 {
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', Arial, sans-serif;
     color: #fff;
     font-size: 48px;
     margin: 0;
@@ -35,63 +40,75 @@ header {
     color: #fff;
 }
 
-/* Hamburger Menu */
-.hamburger {
+.hamburger-left, .hamburger-right {
     display: block;
     cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.hamburger span {
+.hamburger-left span, .hamburger-right span {
     display: block;
     width: 25px;
     height: 3px;
     background: #fff;
     margin: 5px 0;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.hamburger.active span:nth-child(1) {
+.hamburger-left.active span:nth-child(1), .hamburger-right.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
+.hamburger-left.active span:nth-child(2), .hamburger-right.active span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.hamburger-left.active span:nth-child(3), .hamburger-right.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.nav-menu {
+.nav-menu-left, .nav-menu-right {
     display: none;
     position: absolute;
     top: 80px;
-    right: 0;
-    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Same green gradient as header */
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
     border-radius: 5px;
 }
 
-.nav-menu.active {
+.nav-menu-left {
+    left: 20px;
+    background: linear-gradient(90deg, #2a6626, #6b9e31);
+}
+
+.nav-menu-right {
+    right: 20px;
+    background: linear-gradient(90deg, #6b9e31, #2a6626);
+    text-align: right;
+}
+
+.nav-menu-left.active, .nav-menu-right.active {
     display: block;
 }
 
-.nav-menu li {
+.nav-menu-left li, .nav-menu-right li {
     list-style: none;
     padding: 15px 20px;
 }
 
-.nav-menu li a {
+.nav-menu-left li a, .nav-menu-right li a {
     color: #fff;
     text-decoration: none;
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', Arial, sans-serif;
     font-size: 16px;
     transition: color 0.3s;
 }
 
-.nav-menu li a:hover {
-    color: #d4af37; /* Keeping gold hover color for contrast */
+.nav-menu-left li a:hover, .nav-menu-right li a:hover {
+    color: #d4af37;
 }
 
 main {
@@ -101,7 +118,7 @@ main {
 }
 
 .intro {
-    background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
+    background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
     padding: 20px 0;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -116,9 +133,78 @@ main {
 }
 
 .intro h2 {
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', Arial, sans-serif;
     color: #2a6626;
     margin-bottom: 10px;
+}
+
+/* Featured Article Section */
+.featured-article {
+    background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.article-preview {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.article-preview i {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.article-preview h2 {
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.article-preview p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #1e4b1c, #5a8a27);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Audiowide', Arial, sans-serif;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.read-more:hover {
+    background: linear-gradient(90deg, #2a6626, #6b9e31);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .featured-article {
+        padding: 20px;
+    }
+
+    .article-preview h2 {
+        font-size: 24px;
+    }
+
+    .article-preview p {
+        font-size: 14px;
+    }
+
+    .read-more {
+        padding: 8px 16px;
+    }
 }
 
 .categories-container {
@@ -127,7 +213,7 @@ main {
 }
 
 .categories-container h2 {
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', Arial, sans-serif;
     color: #2a6626;
     text-align: center;
     margin-bottom: 20px;
@@ -153,7 +239,7 @@ main {
     }
 }
 
-.category {
+/*.category {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -163,7 +249,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Restored original green gradient */
+    background: linear-gradient(90deg, #2a6626, #6b9e31);
+}*/
+
+.category {
+    background-color: #2a6626; /* Fallback in case the gradient fails */
+    background-image: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626); /* Use background-image for the gradient */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .category:hover {
@@ -183,7 +283,7 @@ main {
 }
 
 .category h3 {
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Audiowide', Arial, sans-serif;
     color: #fff;
     margin-bottom: 10px;
 }
@@ -194,8 +294,8 @@ main {
 }
 
 .item {
-    margin-bottom: 20px; /* Adds vertical spacing between each item */
-    max-width: 800px; /* Matches the max-width of other centered elements like .scripture */
+    margin-bottom: 20px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -204,8 +304,8 @@ main {
     display: block;
     width: 100%;
     padding: 15px;
-    font-family: 'Audiowide', sans-serif;
-    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Same green gradient as header */
+    font-family: 'Audiowide', Arial, sans-serif;
+    background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     border: none;
     color: #fff;
     text-align: center;
@@ -215,46 +315,62 @@ main {
 }
 
 .item-button:hover {
-    background: linear-gradient(135deg, #1e4b1c, #5a8a27); /* Slightly darker green gradient on hover */
+    background: linear-gradient(90deg, #1e4b1c, #5a8a27);
 }
 
 .item-content {
     padding: 20px;
-    background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
+    background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
     border-radius: 0 0 5px 5px;
     text-align: center;
 }
 
 .item-content h2 {
-    display: block; /* Ensures the h2 behaves as a block-level element */
-    margin-top: 40px; /* Adequate space above the header */
-    margin-bottom: 15px; /* A little space below the header */
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
     margin-left: 0;
     margin-right: 0;
-    font-family: 'Audiowide', sans-serif !important; /* Ensure Audiowide font applies */
-    color: #2a6626; /* Matches your green color scheme */
-    font-size: 1.5em; /* Matches the size you wanted */
-    text-transform: uppercase; /* Matches the all-caps style in the screenshot */
+    font-family: 'Audiowide', Arial, sans-serif;
+    color: #2a6626;
+    font-size: 1.5em;
+    text-transform: uppercase;
 }
 
 .item-content h2:first-of-type {
-    margin-top: 20px; /* Less space for the first header within each .item-content */
+    margin-top: 20px;
+}
+
+.item-content h3 {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Audiowide', Arial, sans-serif;
+    color: #2a6626;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.item-content h3:first-of-type {
+    margin-top: 20px;
 }
 
 .item-content p strong {
-    display: block; /* Makes the <strong> element a block-level element to respect margins */
-    margin-top: 40px; /* Adequate space above the header */
-    margin-bottom: 15px; /* A little space below the header */
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
     margin-left: 0;
     margin-right: 0;
-    font-family: 'Audiowide', sans-serif !important; /* Ensure Audiowide font applies */
-    color: #2a6626; /* Matches your green color scheme */
-    font-size: 1.5em; /* Matches the size you wanted */
-    text-transform: uppercase; /* Matches the all-caps style in the screenshot */
+    font-family: 'Audiowide', Arial, sans-serif;
+    color: #2a6626;
+    font-size: 1.5em;
+    text-transform: uppercase;
 }
 
 .scripture {
-    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Same green gradient as header */
+    background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     padding: 15px;
     margin: 10px auto;
     border-radius: 8px;
@@ -264,8 +380,19 @@ main {
     text-align: center;
 }
 
+.describe {
+    background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    font-style: italic;
+    color: #000000;
+    max-width: 800px;
+    text-align: center;
+}
+
 footer {
-    background: linear-gradient(135deg, #2a6626, #6b9e31); /* Same green gradient as header */
+    background: linear-gradient(90deg, #2a6626, #6b9e31);
     text-align: center;
     padding: 20px;
     color: #fff;
