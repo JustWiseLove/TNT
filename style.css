@@ -75,7 +75,6 @@ header {
     position: absolute;
     top: 80px;
     width: 200px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
     border-radius: 5px;
 }
 
@@ -150,7 +149,6 @@ main {
 .article-preview {
     max-width: 800px;
     margin: 0 auto;
-    color: #fff;
 }
 
 .article-preview i {
@@ -164,9 +162,11 @@ main {
     font-size: 28px;
     margin-bottom: 15px;
     text-transform: uppercase;
+    color: #fff;
 }
 
-.article-preview p {
+/* New class for the specific <p> in article-preview */
+.preview-text {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -198,7 +198,7 @@ main {
         font-size: 24px;
     }
 
-    .article-preview p {
+    .preview-text {
         font-size: 14px;
     }
 
@@ -239,22 +239,9 @@ main {
     }
 }
 
-/*.category {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(90deg, #2a6626, #6b9e31);
-}*/
-
 .category {
-    background-color: #2a6626; /* Fallback in case the gradient fails */
-    background-image: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626); /* Use background-image for the gradient */
+    background-color: #2a6626;
+    background-image: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -315,7 +302,7 @@ main {
 }
 
 .item-button:hover {
-    background: linear-gradient(90deg, #1e4b1c, #5a8a27);
+    background: linear-gradient(90deg, #6b9e31);
 }
 
 .item-content {
@@ -323,6 +310,11 @@ main {
     background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
     border-radius: 0 0 5px 5px;
     text-align: center;
+    color: #333; /* Ensure default text color */
+}
+
+.item-content p {
+    color: #333; /* Explicitly set for <p> elements */
 }
 
 .item-content h2 {
@@ -369,19 +361,20 @@ main {
     text-transform: uppercase;
 }
 
-.item-content p {
-    color: #000000;
-}
-
 .scripture {
     background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     padding: 15px;
     margin: 10px auto;
     border-radius: 8px;
     font-style: italic;
-    color: #fff;
+    color: #fff; /* Default white text */
     max-width: 800px;
     text-align: center;
+}
+
+/* Ensure scripture text inside item-content remains white */
+.item-content .scripture {
+    color: #fff;
 }
 
 .describe {
@@ -390,7 +383,7 @@ main {
     margin: 10px auto;
     border-radius: 8px;
     font-style: italic;
-    color: #000000;
+    color: #333; /* Updated to match item-content */
     max-width: 800px;
     text-align: center;
 }
