@@ -369,6 +369,10 @@ main {
     text-transform: uppercase;
 }
 
+.item-content p {
+    color: #000000;
+}
+
 .scripture {
     background: linear-gradient(90deg, #2a6626, #6b9e31, #2a6626);
     padding: 15px;
