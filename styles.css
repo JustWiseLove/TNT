@@ -16,7 +16,7 @@ html, body {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #000000; /* Unified black background */
+    background: #000000;
     color: #fff;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
@@ -127,17 +127,12 @@ main.main-content {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    background-color: #000000; /* Ensure black background */
-}
-
-#home-content {
-    background-color: #000000; /* Ensure black background for embedded content */
-    padding: 0;
 }
 
 .top-section {
     background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
     margin: 5px 0;
+    /*border-radius: 8px;*/
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -326,7 +321,8 @@ main.main-content {
     height: 100%;
     display: block;
     margin: 5px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /*border-radius: 8px;*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
     width: 100%;
     margin-top: 5px !important;
@@ -338,7 +334,8 @@ main.main-content {
     height: 100%;
     display: block;
     margin: 5px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /*border-radius: 8px;*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
     width: 100%;
     margin-top: 5px !important;
@@ -358,7 +355,6 @@ footer {
 
 footer p {
     margin: 10px 0 0;
-    cursor: pointer; /* For the clickable copyright toggle */
 }
 
 .placeholder {
@@ -369,148 +365,6 @@ footer p {
     margin: 15px 0;
     max-width: 800px;
     width: 100%;
-}
-
-/* Styles from home-styles.css */
-main {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #000000; /* Reinforce black background */
-}
-
-.featured-article {
-    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
-    padding: 20px 10px 0px 10px;
-    margin: 5px 0 5px 0; /* Black margins between sections */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.featured-article:last-child {
-    margin-bottom: 20px;
-}
-
-.article-preview {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-header {
-    font-family: 'Audiowide', Arial, sans-serif;
-    color: #000000;
-}
-
-.preview-text {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #000000;
-}
-
-.timeline-section {
-    padding: 20px 20px 0px 20px;
-    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    margin: 5px 0 5px 0; /* Black margins between sections */
-}
-
-.paradise-tabs, .spotlight-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 35px;
-}
-
-.paradise-tab, .spotlight-tab {
-    padding: 10px 20px;
-    background: #000;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.paradise-tab.active, .spotlight-tab.active {
-    background: var(--Green);
-    box-shadow: 0 0 10px var(--Green);
-}
-
-.timeline-line {
-    height: 2px;
-    background: var(--Green);
-    position: relative;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.timeline-dot {
-    width: 12px;
-    height: 12px;
-    background: #ffffff;
-    border: 2px solid var(--Green);
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.timeline-dot.active {
-    background: var(--Green);
-    transform: scale(1.2);
-    box-shadow: 0 0 10px var(--Green);
-}
-
-.timeline-description {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-    max-width: 800px;
-    margin: 20px auto 5px auto;
-    padding: 15px;
-    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
-    border-radius: 8px;
-    font-style: italic;
-    color: #000000;
-    text-align: center;
-}
-
-.timeline-event-title {
-    font-family: 'Audiowide', Arial, sans-serif;
-    color: #000000;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.timeline-prev, .timeline-next {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: calc(50% + 40px);
-    transform: translateY(-50%);
-}
-
-.timeline-prev {
-    left: 10px;
-}
-
-.timeline-next {
-    right: 10px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
@@ -535,18 +389,6 @@ main {
 
     .bear-image {
         margin: 5px auto;
-    }
-
-    .featured-article {
-        padding: 10px 10px 0px 10px;
-    }
-
-    .preview-text {
-        font-size: 14px;
-    }
-
-    .paradise-tab, .spotlight-tab {
-        font-size: 14px;
     }
 }
 
