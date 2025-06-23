@@ -4,9 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family - Just Wise Love</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --Dark: #004800;
+            --Green: #008000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000000;
+            color: #fff;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-family: 'Audiowide', Arial, sans-serif;
+            color: #000000;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        main {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: auto;
+        }
+
+        .intro {
+            background: #000000;
+            padding: 20px 0;
+            margin-bottom: 0px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-family: 'Audiowide', Arial, sans-serif;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
         .weekly-topic {
             background-color: #d3d3d3;
             padding: 20px;
@@ -14,21 +89,96 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
         .weekly-topic h2 {
             font-family: 'Audiowide', sans-serif;
             color: #333;
             margin-bottom: 10px;
         }
+
         .weekly-topic p {
             font-size: 16px;
             margin: 0;
         }
+
+        .item {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .item-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-family: 'Audiowide', Arial, sans-serif;
+            background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+            border: none;
+            color: #000000;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .item-button:hover {
+            background: linear-gradient(90deg, var(--Green));
+        }
+
+        .item-content {
+            padding: 20px;
+            background: #000000;
+            border-radius: 0 0 5px 5px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .item-content p {
+            color: #fff;
+        }
+
         .item-content h3 {
             font-family: 'Audiowide', sans-serif;
             color: #333;
             font-size: 20px;
             margin-bottom: 15px;
             text-align: center;
+        }
+
+        .scripture {
+            background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 8px;
+            font-style: italic;
+            color: #000000;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .item-content .scripture {
+            color: #000000;
+        }
+
+        footer {
+            background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+            text-align: center;
+            padding: 5px;
+            color: #000000;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        footer p {
+            margin: 10px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 42px;
+            }
         }
     </style>
 </head>
@@ -539,7 +689,7 @@
                     <p>Thanksgiving, rooted in paganism, promotes materialism (2 Corinthians 6:17). Psalm 92:1 urges constant gratitude. Families thank Jehovah, preparing for paradise (Revelation 21:4). Discuss: Why avoid Thanksgiving? Let’s list blessings this week.</p>
                 </div>
             </details>
-                        <details class="item">
+            <details class="item">
                 <summary class="item-button">November 28, 2025</summary>
                 <div class="item-content">
                     <h3>Birth of Jesus</h3>
@@ -589,13 +739,13 @@
                 <summary class="item-button">December 26, 2025</summary>
                 <div class="item-content">
                     <h3>New Years</h3>
-                    <p>New Year’s celebrations, rooted in pagan festivals like Rome’s Saturnalia, promote materialism and false renewal rituals, clashing with Jehovah’s standards (2 Corinthians 6:17). Jeremiah 10:3-5 condemns worldly customs. Psalm 90:12 urges numbering our days for wisdom, not fleeting resolutions. Families reject New Year’s, focusing on Jehovah’s purpose—eternal life in paradise (John 17:3). Unlike worldly hopes tied to human efforts, scripture assures Jehovah’s Kingdom brings true renewal (Revelation 21:1-4). Matthew 6:33 prioritizes spiritual goals over temporal pursuits. We honor Jehovah by living each day for Him, trusting His promises (Psalm 37:5). This lesson teaches us to avoid pagan traditions, centering our lives on worship. Discuss: Why do we reject New Year’s celebrations? Let’s express gratitude for Jehovah’s hope this week, perhaps by discussing a scripture like Isaiah 65:17, preparing for a new world where His truth will replace worldly festivals with eternal joy.</p>
+                    <p>New Year’s celebrations, rooted in pagan festivals like Rome’s Saturnalia, promote materialism and false renewal rituals, clashing with Jehovah’s standards (2 Corinthians 6:17). Jeremiah 10:3-5 condemns worldly customs. Psalm 90:12 urges numbering our days for wisdom, not fleeting resolutions. Families reject New Year’s, focusing on Jehovah’s purpose—eternal life in paradise (John 17:3). Unlike worldly hopes tied to human efforts, scripture assures Jehovah’s Kingdom brings true renewal (Revelation 21:1-4). Matthew 6:33 prioritizes spiritual goals over temporal pursuits. We honor Jehovah by living each day for Him, trusting His promises (Psalm 37:5). This lesson teaches us to avoid pagan traditions, centering our lives on worship. Discuss: Why do we reject New Year’s celebrations? Let’s express gratitude for Jehovah’s hope this week, perhaps by discussing a scripture like Isaiah 65:17, preparing for a paradise where His new world will replace worldly festivals with eternal joy.</p>
 
                     <h3>Goals</h3>
                     <p>Philippians 3:13-14 urges pressing toward spiritual goals, like growing closer to Jehovah. Proverbs 16:3 commits our plans to Him, ensuring success. Unlike worldly ambitions, biblical goals—regular study, ministry, or pioneering—align with Jehovah’s will (Matthew 6:33). Psalm 119:105 shows scripture guides our steps. Examples like Paul, who endured for the prize (1 Corinthians 9:24-27), inspire us to set measurable goals, such as daily Bible reading or witnessing weekly. Families support each other, reviewing progress (Proverbs 27:17), preparing for paradise where our efforts will glorify Jehovah (Isaiah 65:23). Goals rooted in faith, not pride, lead to eternal life (John 17:3). We avoid distractions, focusing on what lasts (1 Timothy 6:6-8). Discuss: What spiritual goal can we set? Let’s choose one family goal, like a weekly study night, and track it, building habits that honor Jehovah and prepare us for His Kingdom.</p>
 
                     <h3>Change</h3>
-                    <p>Ephesians 4:22-24 commands shedding the old personality, embracing Jehovah’s new creation (2 Corinthians 5:17). Romans 12:2 urges transforming our mind through scripture. Change is not self-driven but guided by Jehovah’s spirit (Galatians 5:25). Examples like Peter, who overcame impulsiveness (Luke 22:31-34), show Jehovah refines us through discipline (Hebrews 12:11). Families change by applying principles, such as practicing patience (Colossians 3:12) or rejecting materialism (1 Timothy 6:6-8). Psalm 51:10 prays for a new heart, essential in these last days (2 Timothy 3:1). Change ensures we reflect Jehovah’s qualities, preparing for paradise (Revelation 21:4). Unlike worldly resolutions, biblical change is lasting, rooted in truth (John 17:3). We support each other, encouraging growth (Hebrews 10:24-25). Discuss: What change can we pursue? Let’s pick one quality, like kindness, to practice this week, transforming our family for Jehovah’s eternal Kingdom.</p>
+                    <p>Ephesians 4:22-24 commands shedding the old personality, embracing Jehovah’s new creation (2 Corinthians 5:17). Romans 12:2 urges transforming our mind through scripture. Change is not self-driven but guided by Jehovah’s spirit (Galatians 5:25). Examples like Peter, who overcame impulsiveness (Luke 22:31-34), show Jehovah refines us through discipline (Hebrews 12:11). Families change by applying principles, such as practicing patience (Colossians 3:12) or rejecting materialism (1 Timothy 6:6-8). Psalm 51:10 prays for a new heart, essential in these last days (2 Timothy 3:1). Change ensures we reflect Jehovah’s qualities, preparingPedido paradise (Revelation 21:4). Discuss: What change can we pursue? Let’s pick one quality, like kindness, to practice this week, transforming our family for Jehovah’s eternal Kingdom.</p>
                 </div>
             </details>
         </div>
@@ -611,7 +761,7 @@
             { date: "January 3, 2025", topics: ["Cain & Abel", "Reincarnation", "Faith"] },
             { date: "January 10, 2025", topics: ["Broadcast"] },
             { date: "January 17, 2025", topics: ["Noah", "Endurance", "Preaching"] },
-            { date: "January 24, 2025", topics: ["Babel", "Pride", "Humility"] },
+            { date: "January 24, 24, 2025", topics: ["Babel", "Pride", "Humility"] },
             { date: "January 31, 2025", topics: ["Valentine's Day", "Marriage"] },
             { date: "February 7, 2025", topics: ["Broadcast"] },
             { date: "February 14, 2025", topics: ["Lot", "Immortality", "Homosexuality", "Obedience"] },
@@ -643,7 +793,7 @@
             { date: "August 8, 2025", topics: ["Broadcast"] },
             { date: "August 15, 2025", topics: ["Paul & Timothy Educated Men", "Philosophy"] },
             { date: "August 22, 2025", topics: ["Paul & Timothy", "Youth", "Make It Your Own"] },
-            { date: "August 26, 2025", topics: ["Labor Day"] },
+            { date: "August 29, 2025", topics: ["Labor Day"] },
             { date: "September 5, 2025", topics: ["Broadcast"] },
             { date: "September 12, 2025", topics: ["4 Horsemen", "What Do You Look Forward To?"] },
             { date: "September 19, 2025", topics: ["666", "Numerology", "Spiritism"] },
