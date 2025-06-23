@@ -371,7 +371,6 @@ footer p {
     width: 100%;
 }
 
-/* Styles from home-styles.css */
 main {
     max-width: 100%;
     margin: 0;
@@ -578,4 +577,107 @@ main {
 
 .hamburger-menu a:hover {
     color: #d4af37;
+}
+
+/* Styles from family.html with renamed classes */
+.intro {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    padding: 20px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.intro-content h2 {
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.weekly-truth {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    padding: 15px;
+    margin: 5px 0;
+    text-align: center;
+    color: #000000;
+}
+
+.weekly-truth h2 {
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.weekly-truth p {
+    font-size: 16px;
+}
+
+.unit-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.unit {
+    background: #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.unit-button {
+    width: 100%;
+    padding: 10px;
+    background: var(--Green);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.unit-button:hover {
+    background: #006400;
+}
+
+.unit-content {
+    padding: 15px;
+    color: #ffffff;
+    display: none;
+}
+
+.unit[open] .unit-content {
+    display: block;
+}
+
+.unit-content h3 {
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ffd700;
+}
+
+.unit-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.evidence {
+    font-style: italic;
+    color: #d4af37;
+    margin-top: 10px;
 }
