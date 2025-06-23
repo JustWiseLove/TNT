@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School - Just Wise Love</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="apple-touch-icon.png">
     <style>
-        /* Custom styles specific to school.html */
+        /* Custom styles for homeschool page */
         .worksheet-title {
             font-family: 'Audiowide', sans-serif;
             font-size: 24px;
-            color: #000000;
+            color: #000;
             text-align: center;
             margin: 10px 0;
         }
@@ -23,7 +23,6 @@
             font-style: italic;
             text-align: center;
             margin-bottom: 20px;
-            color: #000000;
         }
 
         .questions {
@@ -41,17 +40,18 @@
         .questions li {
             margin-bottom: 10px;
             text-align: left !important;
-            color: #ffffff; /* Match body text color from styles.css */
         }
 
         .answers {
             margin-top: 20px;
             padding: 10px;
-            border-top: 1px solid #333333;
+            border-top: 1px solid #333;
             text-align: center;
             transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
             font-size: 12px;
-            color: #333333;
+            color: #333;
         }
 
         .answers p {
@@ -62,8 +62,8 @@
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
-            color: #000000;
-            background-color: var(--Green);
+            color: #2a6626;
+            background-color: #e0e0e0;
             border: none;
             border-radius: 5px;
             font-family: 'Audiowide', sans-serif;
@@ -73,14 +73,14 @@
         }
 
         .print-btn:hover {
-            background-color: #006400; /* Darker green to match unit-button hover */
+            background-color: #b0b0b0;
         }
 
         /* Print styles */
         @media print {
             body {
-                background-color: #ffffff;
-                color: #000000;
+                background-color: #fff;
+                color: #000;
                 margin: 0;
                 padding: 0;
             }
@@ -94,7 +94,7 @@
                 padding: 0;
             }
 
-            .unit {
+            .item {
                 page-break-after: always;
                 margin: 0;
                 width: 100%;
@@ -103,14 +103,13 @@
                 overflow: hidden;
             }
 
-            .unit-content {
+            .item-content {
                 display: block !important;
                 background-color: transparent;
                 border: none;
                 padding: 20px;
                 box-sizing: border-box;
                 max-height: 100%;
-                color: #000000;
             }
 
             .worksheet-title {
@@ -127,14 +126,16 @@
             }
 
             .questions li {
-                color: #000000;
+                color: #000;
                 margin-bottom: 10px;
             }
 
             .answers {
                 transform: rotate(180deg);
-                border-top: 1px solid #000000;
-                color: #000000;
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                border-top: 1px solid #000;
+                color: #000;
             }
 
             .print-btn {
@@ -145,17 +146,10 @@
                 size: 8.5in 11in;
                 margin: 0.5in;
             }
-        }
 
-        /* Fallback to ensure details interactivity */
-        details {
-            display: block;
-        }
-        summary {
-            cursor: pointer;
-        }
-        .unit-button {
-            pointer-events: auto;
+            .item-content::after {
+                content: none;
+            }
         }
     </style>
 </head>
@@ -170,789 +164,829 @@
         <section class="intro">
             <div class="intro-content">
                 <h2>Train Your Child</h2>
-                <div class="evidence">
+                <div class="scripture">
                     <p><em>“No greater joy do I have than this: that I should hear that my children go on walking in the truth.” - 3 John 4</em></p>
                 </div>
             </div>
         </section>
         <!-- Characters: Faithful Servants -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Characters: Faithful Servants</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Faithful Servants</h2>
-                    <p class="worksheet-intro">Learn about those who served Jehovah faithfully with endurance and trust.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who was the first faithful servant mentioned in Genesis?</li>
-                            <li>What did Noah do to show his faith in Jehovah?</li>
-                            <li>How long did Noah take to build the ark?</li>
-                            <li>What did Jehovah tell Abraham to do with his son Isaac?</li>
-                            <li>How did Abraham show his faith in Jehovah?</li>
-                            <li>Who was Abraham’s wife?</li>
-                            <li>What promise did Jehovah make to Abraham about his offspring?</li>
-                            <li>Who was the mother of Joseph?</li>
-                            <li>How did Joseph remain faithful despite being sold into slavery?</li>
-                            <li>What position did Joseph eventually hold in Egypt?</li>
-                            <li>Who led the Israelites out of Egypt?</li>
-                            <li>How did Moses show faith when facing Pharaoh?</li>
-                            <li>What did Jehovah give Moses on Mount Sinai?</li>
-                            <li>Who was Moses’ brother?</li>
-                            <li>How did Aaron support Moses in serving Jehovah?</li>
-                            <li>Who was the first king of Israel to be called a man after Jehovah’s own heart?</li>
-                            <li>How did David show faith when facing Goliath?</li>
-                            <li>What did David use to defeat Goliath?</li>
-                            <li>Who was David’s best friend?</li>
-                            <li>How did Jonathan show loyalty to David?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Characters: Faithful Servants</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Faithful Servants</h2>
+                        <p class="worksheet-intro">Learn about those who served Jehovah faithfully with endurance and trust.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who was the first faithful servant mentioned in Genesis?</li>
+                                <li>What did Noah do to show his faith in Jehovah?</li>
+                                <li>How long did Noah take to build the ark?</li>
+                                <li>What did Jehovah tell Abraham to do with his son Isaac?</li>
+                                <li>How did Abraham show his faith in Jehovah?</li>
+                                <li>Who was Abraham’s wife?</li>
+                                <li>What promise did Jehovah make to Abraham about his offspring?</li>
+                                <li>Who was the mother of Joseph?</li>
+                                <li>How did Joseph remain faithful despite being sold into slavery?</li>
+                                <li>What position did Joseph eventually hold in Egypt?</li>
+                                <li>Who led the Israelites out of Egypt?</li>
+                                <li>How did Moses show faith when facing Pharaoh?</li>
+                                <li>What did Jehovah give Moses on Mount Sinai?</li>
+                                <li>Who was Moses’ brother?</li>
+                                <li>How did Aaron support Moses in serving Jehovah?</li>
+                                <li>Who was the first king of Israel to be called a man after Jehovah’s own heart?</li>
+                                <li>How did David show faith when facing Goliath?</li>
+                                <li>What did David use to defeat Goliath?</li>
+                                <li>Who was David’s best friend?</li>
+                                <li>How did Jonathan show loyalty to David?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Noah, 2. Built an ark as Jehovah commanded, 3. About 50-60 years, 4. Offer him as a sacrifice, 5. Obeyed Jehovah’s command without hesitation, 6. Sarah, 7. His offspring would be as numerous as the stars, 8. Rachel, 9. Refused to sin with Potiphar’s wife, 10. Second-in-command to Pharaoh, 11. Moses, 12. Trusted Jehovah to send the plagues, 13. The Ten Commandments, 14. Aaron, 15. Spoke for Moses and served as high priest, 16. David, 17. Trusted Jehovah to deliver him, 18. A sling and a stone, 19. Jonathan, 20. Protected David from Saul</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Noah, 2. Built an ark as Jehovah commanded, 3. About 50-60 years, 4. Offer him as a sacrifice, 5. Obeyed Jehovah’s command without hesitation, 6. Sarah, 7. His offspring would be as numerous as the stars, 8. Rachel, 9. Refused to sin with Potiphar’s wife, 10. Second-in-command to Pharaoh, 11. Moses, 12. Trusted Jehovah to send the plagues, 13. The Ten Commandments, 14. Aaron, 15. Spoke for Moses and served as high priest, 16. David, 17. Trusted Jehovah to deliver him, 18. A sling and a stone, 19. Jonathan, 20. Protected David from Saul</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Characters: The 12 Disciples -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Characters: The 12 Disciples</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">The 12 Disciples</h2>
-                    <p class="worksheet-intro">Explore the lives of Jesus’ 12 disciples, who left everything to follow him.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who were the first two disciples Jesus called?</li>
-                            <li>What were Simon Peter and Andrew doing when Jesus called them?</li>
-                            <li>Who was the brother of Simon Peter?</li>
-                            <li>What did Jesus rename Simon?</li>
-                            <li>Who were the sons of Zebedee?</li>
-                            <li>What nickname did Jesus give James and John?</li>
-                            <li>Which disciple was a tax collector before following Jesus?</li>
-                            <li>What did Matthew do after Jesus called him?</li>
-                            <li>Which disciple is often called “the Doubter”?</li>
-                            <li>What did Thomas say after seeing the resurrected Jesus?</li>
-                            <li>Who betrayed Jesus for 30 pieces of silver?</li>
-                            <li>What did Judas Iscariot do after betraying Jesus?</li>
-                            <li>Who replaced Judas as an apostle?</li>
-                            <li>Which disciple was known as the one “whom Jesus loved”?</li>
-                            <li>What did John do at the Last Supper?</li>
-                            <li>Which disciple denied Jesus three times?</li>
-                            <li>What happened to Peter after he denied Jesus?</li>
-                            <li>Which disciple was also called Nathanael?</li>
-                            <li>What did Philip do after meeting Jesus?</li>
-                            <li>Which disciple was known as “the Zealot”?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Characters: The 12 Disciples</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">The 12 Disciples</h2>
+                        <p class="worksheet-intro">Explore the lives of Jesus’ 12 disciples, who left everything to follow him.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who were the first two disciples Jesus called?</li>
+                                <li>What were Simon Peter and Andrew doing when Jesus called them?</li>
+                                <li>Who was the brother of Simon Peter?</li>
+                                <li>What did Jesus rename Simon?</li>
+                                <li>Who were the sons of Zebedee?</li>
+                                <li>What nickname did Jesus give James and John?</li>
+                                <li>Which disciple was a tax collector before following Jesus?</li>
+                                <li>What did Matthew do after Jesus called him?</li>
+                                <li>Which disciple is often called “the Doubter”?</li>
+                                <li>What did Thomas say after seeing the resurrected Jesus?</li>
+                                <li>Who betrayed Jesus for 30 pieces of silver?</li>
+                                <li>What did Judas Iscariot do after betraying Jesus?</li>
+                                <li>Who replaced Judas as an apostle?</li>
+                                <li>Which disciple was known as the one “whom Jesus loved”?</li>
+                                <li>What did John do at the Last Supper?</li>
+                                <li>Which disciple denied Jesus three times?</li>
+                                <li>What happened to Peter after he denied Jesus?</li>
+                                <li>Which disciple was also called Nathanael?</li>
+                                <li>What did Philip do after meeting Jesus?</li>
+                                <li>Which disciple was known as “the Zealot”?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Simon Peter and Andrew, 2. Fishing, 3. Andrew, 4. Peter, 5. James and John, 6. Sons of Thunder, 7. Matthew, 8. Left his tax office and followed Jesus, 9. Thomas, 10. “My Lord and my God!”, 11. Judas Iscariot, 12. Hanged himself, 13. Matthias, 14. John, 15. Leaned on Jesus’ chest, 16. Peter, 17. He wept bitterly, 18. Bartholomew, 19. Brought Nathanael to Jesus, 20. Simon</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Simon Peter and Andrew, 2. Fishing, 3. Andrew, 4. Peter, 5. James and John, 6. Sons of Thunder, 7. Matthew, 8. Left his tax office and followed Jesus, 9. Thomas, 10. “My Lord and my God!”, 11. Judas Iscariot, 12. Hanged himself, 13. Matthias, 14. John, 15. Leaned on Jesus’ chest, 16. Peter, 17. He wept bitterly, 18. Bartholomew, 19. Brought Nathanael to Jesus, 20. Simon</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Characters: Restored Pure Worship -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Characters: Restored Pure Worship</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Restored Pure Worship</h2>
-                    <p class="worksheet-intro">Discover how these characters helped restore pure worship to Jehovah.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who led the Jews back to Jerusalem to rebuild the temple?</li>
-                            <li>What role did Ezra have in Jerusalem?</li>
-                            <li>Who was the governor that worked with Ezra?</li>
-                            <li>What did Nehemiah rebuild in Jerusalem?</li>
-                            <li>How long did it take Nehemiah to rebuild the wall?</li>
-                            <li>Who opposed Nehemiah’s work?</li>
-                            <li>What did Ezra do to promote pure worship?</li>
-                            <li>Which prophet encouraged the rebuilding of the temple?</li>
-                            <li>What did Haggai prophesy about the temple?</li>
-                            <li>Who was the high priest during the temple’s rebuilding?</li>
-                            <li>What did Zerubbabel do for pure worship?</li>
-                            <li>Which Persian king allowed the Jews to return to Jerusalem?</li>
-                            <li>What decree did Cyrus issue?</li>
-                            <li>Who was the prophetess that helped during this time?</li>
-                            <li>What did Huldah prophesy about Josiah?</li>
-                            <li>Who found the book of the Law during Josiah’s reign?</li>
-                            <li>What did Josiah do after hearing the Law?</li>
-                            <li>Which king removed idolatry from Judah?</li>
-                            <li>What festival did Josiah reinstate?</li>
-                            <li>How did the people respond to Josiah’s reforms?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Characters: Restored Pure Worship</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Restored Pure Worship</h2>
+                        <p class="worksheet-intro">Discover how these characters helped restore pure worship to Jehovah.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who led the Jews back to Jerusalem to rebuild the temple?</li>
+                                <li>What role did Ezra have in Jerusalem?</li>
+                                <li>Who was the governor that worked with Ezra?</li>
+                                <li>What did Nehemiah rebuild in Jerusalem?</li>
+                                <li>How long did it take Nehemiah to rebuild the wall?</li>
+                                <li>Who opposed Nehemiah’s work?</li>
+                                <li>What did Ezra do to promote pure worship?</li>
+                                <li>Which prophet encouraged the rebuilding of the temple?</li>
+                                <li>What did Haggai prophesy about the temple?</li>
+                                <li>Who was the high priest during the temple’s rebuilding?</li>
+                                <li>What did Zerubbabel do for pure worship?</li>
+                                <li>Which Persian king allowed the Jews to return to Jerusalem?</li>
+                                <li>What decree did Cyrus issue?</li>
+                                <li>Who was the prophetess that helped during this time?</li>
+                                <li>What did Huldah prophesy about Josiah?</li>
+                                <li>Who found the book of the Law during Josiah’s reign?</li>
+                                <li>What did Josiah do after hearing the Law?</li>
+                                <li>Which king removed idolatry from Judah?</li>
+                                <li>What festival did Josiah reinstate?</li>
+                                <li>How did the people respond to Josiah’s reforms?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Ezra, 2. Priest and scribe, 3. Nehemiah, 4. The city wall, 5. 52 days, 6. Sanballat and Tobiah, 7. Taught the Law to the people, 8. Haggai, 9. It would be filled with glory, 10. Joshua, 11. Led the people to rebuild the temple, 12. Cyrus, 13. To rebuild the temple in Jerusalem, 14. Huldah, 15. Judgment on Judah but peace for Josiah, 16. Hilkiah, 17. Removed idolatry and celebrated the Passover, 18. Josiah, 19. The Passover, 20. They obeyed the Law</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Ezra, 2. Priest and scribe, 3. Nehemiah, 4. The city wall, 5. 52 days, 6. Sanballat and Tobiah, 7. Taught the Law to the people, 8. Haggai, 9. It would be filled with glory, 10. Joshua, 11. Led the people to rebuild the temple, 12. Cyrus, 13. To rebuild the temple in Jerusalem, 14. Huldah, 15. Judgment on Judah but peace for Josiah, 16. Hilkiah, 17. Removed idolatry and celebrated the Passover, 18. Josiah, 19. The Passover, 20. They obeyed the Law</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Characters: Bible Writers -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Characters: Bible Writers</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Bible Writers</h2>
-                    <p class="worksheet-intro">Learn about the men Jehovah used to write His inspired Word.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who wrote the first five books of the Bible?</li>
-                            <li>What did Moses write about in Genesis?</li>
-                            <li>Which king wrote most of the Proverbs?</li>
-                            <li>What did Solomon ask Jehovah for?</li>
-                            <li>Who wrote the book of Isaiah?</li>
-                            <li>What major prophecy did Isaiah record about the Messiah?</li>
-                            <li>Which prophet wrote the book of Jeremiah?</li>
-                            <li>What did Jeremiah prophesy about Jerusalem?</li>
-                            <li>Who wrote the book of Daniel?</li>
-                            <li>What vision did Daniel have about the last days?</li>
-                            <li>Which disciple wrote the Gospel of Matthew?</li>
-                            <li>What was Matthew’s occupation before following Jesus?</li>
-                            <li>Who wrote the Gospel of Luke?</li>
-                            <li>What was Luke’s profession?</li>
-                            <li>Which apostle wrote the Gospel of John?</li>
-                            <li>What did John emphasize in his Gospel?</li>
-                            <li>Who wrote most of the Christian Greek Scriptures’ letters?</li>
-                            <li>What was Paul’s background before becoming a Christian?</li>
-                            <li>Which epistle did Paul write to encourage endurance?</li>
-                            <li>What did Paul say about the scriptures in 2 Timothy?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Characters: Bible Writers</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Bible Writers</h2>
+                        <p class="worksheet-intro">Learn about the men Jehovah used to write His inspired Word.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who wrote the first five books of the Bible?</li>
+                                <li>What did Moses write about in Genesis?</li>
+                                <li>Which king wrote most of the Proverbs?</li>
+                                <li>What did Solomon ask Jehovah for?</li>
+                                <li>Who wrote the book of Isaiah?</li>
+                                <li>What major prophecy did Isaiah record about the Messiah?</li>
+                                <li>Which prophet wrote the book of Jeremiah?</li>
+                                <li>What did Jeremiah prophesy about Jerusalem?</li>
+                                <li>Who wrote the book of Daniel?</li>
+                                <li>What vision did Daniel have about the last days?</li>
+                                <li>Which disciple wrote the Gospel of Matthew?</li>
+                                <li>What was Matthew’s occupation before following Jesus?</li>
+                                <li>Who wrote the Gospel of Luke?</li>
+                                <li>What was Luke’s profession?</li>
+                                <li>Which apostle wrote the Gospel of John?</li>
+                                <li>What did John emphasize in his Gospel?</li>
+                                <li>Who wrote most of the Christian Greek Scriptures’ letters?</li>
+                                <li>What was Paul’s background before becoming a Christian?</li>
+                                <li>Which epistle did Paul write to encourage endurance?</li>
+                                <li>What did Paul say about the scriptures in 2 Timothy?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Moses, 2. Creation and early human history, 3. Solomon, 4. Wisdom, 5. Isaiah, 6. The Messiah would be a suffering servant, 7. Jeremiah, 8. Its destruction by Babylon, 9. Daniel, 10. The march of world powers, 11. Matthew, 12. Tax collector, 13. Luke, 14. Physician, 15. John, 16. Jesus as the Son of God, 17. Paul, 18. A Pharisee and persecutor of Christians, 19. Hebrews, 20. They are inspired and beneficial for teaching</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Moses, 2. Creation and early human history, 3. Solomon, 4. Wisdom, 5. Isaiah, 6. The Messiah would be a suffering servant, 7. Jeremiah, 8. Its destruction by Babylon, 9. Daniel, 10. The march of world powers, 11. Matthew, 12. Tax collector, 13. Luke, 14. Physician, 15. John, 16. Jesus as the Son of God, 17. Paul, 18. A Pharisee and persecutor of Christians, 19. Hebrews, 20. They are inspired and beneficial for teaching</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Holidays: Memorial -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Holidays: Memorial</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Memorial</h2>
-                    <p class="worksheet-intro">Understand the importance of the Memorial as Jehovah’s approved celebration.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What event does the Memorial commemorate?</li>
-                            <li>On which Jewish date is the Memorial held?</li>
-                            <li>What did Jesus use to represent his body?</li>
-                            <li>What did the wine represent at the Memorial?</li>
-                            <li>Who instituted the Memorial?</li>
-                            <li>In what year did Jesus institute the Memorial?</li>
-                            <li>Who should partake of the Memorial emblems?</li>
-                            <li>What covenant did Jesus mention during the Memorial?</li>
-                            <li>How often should the Memorial be held?</li>
-                            <li>What did Jesus do before passing the bread?</li>
-                            <li>Who were present at the first Memorial?</li>
-                            <li>What does the Memorial remind us of?</li>
-                            <li>Where did Jesus hold the first Memorial?</li>
-                            <li>What did Jesus say about the wine?</li>
-                            <li>Why is the Memorial held after sundown?</li>
-                            <li>What does the Memorial help us appreciate?</li>
-                            <li>Who should attend the Memorial?</li>
-                            <li>What did Jesus do after the Memorial?</li>
-                            <li>What prayer did Jesus offer before his arrest?</li>
-                            <li>Why is the Memorial important for pure worship?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Holidays: Memorial</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Memorial</h2>
+                        <p class="worksheet-intro">Understand the importance of the Memorial as Jehovah’s approved celebration.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What event does the Memorial commemorate?</li>
+                                <li>On which Jewish date is the Memorial held?</li>
+                                <li>What did Jesus use to represent his body?</li>
+                                <li>What did the wine represent at the Memorial?</li>
+                                <li>Who instituted the Memorial?</li>
+                                <li>In what year did Jesus institute the Memorial?</li>
+                                <li>Who should partake of the Memorial emblems?</li>
+                                <li>What covenant did Jesus mention during the Memorial?</li>
+                                <li>How often should the Memorial be held?</li>
+                                <li>What did Jesus do before passing the bread?</li>
+                                <li>Who were present at the first Memorial?</li>
+                                <li>What does the Memorial remind us of?</li>
+                                <li>Where did Jesus hold the first Memorial?</li>
+                                <li>What did Jesus say about the wine?</li>
+                                <li>Why is the Memorial held after sundown?</li>
+                                <li>What does the Memorial help us appreciate?</li>
+                                <li>Who should attend the Memorial?</li>
+                                <li>What did Jesus do after the Memorial?</li>
+                                <li>What prayer did Jesus offer before his arrest?</li>
+                                <li>Why is the Memorial important for pure worship?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Jesus’ death, 2. Nisan 14, 3. Unleavened bread, 4. Jesus’ blood, 5. Jesus, 6. 33 CE, 7. Those with a heavenly hope, 8. The new covenant, 9. Once a year, 10. Gave thanks, 11. The apostles, 12. Jesus’ sacrifice, 13. An upper room in Jerusalem, 14. It is his blood of the covenant, 15. To align with the Passover, 16. The ransom sacrifice, 17. Everyone, 18. Went to the Garden of Gethsemane, 19. Prayed for his disciples, 20. It honors Jesus’ sacrifice</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Jesus’ death, 2. Nisan 14, 3. Unleavened bread, 4. Jesus’ blood, 5. Jesus, 6. 33 CE, 7. Those with a heavenly hope, 8. The new covenant, 9. Once a year, 10. Gave thanks, 11. The apostles, 12. Jesus’ sacrifice, 13. An upper room in Jerusalem, 14. It is his blood of the covenant, 15. To align with the Passover, 16. The ransom sacrifice, 17. Everyone, 18. Went to the Garden of Gethsemane, 19. Prayed for his disciples, 20. It honors Jesus’ sacrifice</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Holidays: Christmas -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Holidays: Christmas</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Christmas</h2>
-                    <p class="worksheet-intro">Examine why Christmas is not part of pure worship to Jehovah.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible give the date of Jesus’ birth?</li>
-                            <li>What season were shepherds in the fields when Jesus was born?</li>
-                            <li>Why does this season make December 25 unlikely?</li>
-                            <li>What did the wise men bring to Jesus?</li>
-                            <li>How old was Jesus when the wise men visited?</li>
-                            <li>What pagan festival influenced Christmas?</li>
-                            <li>Which Roman emperor made Christmas a holiday?</li>
-                            <li>In what year did Christmas become a holiday?</li>
-                            <li>What does the Christmas tree originate from?</li>
-                            <li>Why did early Christians not celebrate Christmas?</li>
-                            <li>What does Jehovah say about mixing pagan customs?</li>
-                            <li>What did Jesus say about traditions of men?</li>
-                            <li>What holiday should Christians celebrate instead?</li>
-                            <li>What does the star on a Christmas tree symbolize?</li>
-                            <li>Who is often associated with Christmas gift-giving?</li>
-                            <li>What is the origin of Santa Claus?</li>
-                            <li>Why does Christmas promote materialism?</li>
-                            <li>What did Jesus teach about giving?</li>
-                            <li>How can we honor Jesus instead of celebrating Christmas?</li>
-                            <li>Why does Jehovah reject Christmas celebrations?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Holidays: Christmas</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Christmas</h2>
+                        <p class="worksheet-intro">Examine why Christmas is not part of pure worship to Jehovah.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible give the date of Jesus’ birth?</li>
+                                <li>What season were shepherds in the fields when Jesus was born?</li>
+                                <li>Why does this season make December 25 unlikely?</li>
+                                <li>What did the wise men bring to Jesus?</li>
+                                <li>How old was Jesus when the wise men visited?</li>
+                                <li>What pagan festival influenced Christmas?</li>
+                                <li>Which Roman emperor made Christmas a holiday?</li>
+                                <li>In what year did Christmas become a holiday?</li>
+                                <li>What does the Christmas tree originate from?</li>
+                                <li>Why did early Christians not celebrate Christmas?</li>
+                                <li>What does Jehovah say about mixing pagan customs?</li>
+                                <li>What did Jesus say about traditions of men?</li>
+                                <li>What holiday should Christians celebrate instead?</li>
+                                <li>What does the star on a Christmas tree symbolize?</li>
+                                <li>Who is often associated with Christmas gift-giving?</li>
+                                <li>What is the origin of Santa Claus?</li>
+                                <li>Why does Christmas promote materialism?</li>
+                                <li>What did Jesus teach about giving?</li>
+                                <li>How can we honor Jesus instead of celebrating Christmas?</li>
+                                <li>Why does Jehovah reject Christmas celebrations?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. Likely autumn, 3. Shepherds would not be in fields in winter, 4. Gold, frankincense, and myrrh, 5. About two years old, 6. Saturnalia, 7. Constantine, 8. 336 CE, 9. Pagan tree worship, 10. It was not part of pure worship, 11. Do not learn the way of the nations, 12. They nullify the word of God, 13. The Memorial, 14. Pagan sun worship, 15. Saint Nicholas, 16. A 4th-century bishop, 17. Focus on gifts and commercialism, 18. Give without expecting in return, 19. Observe the Memorial, 20. It has pagan origins</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. Likely autumn, 3. Shepherds would not be in fields in winter, 4. Gold, frankincense, and myrrh, 5. About two years old, 6. Saturnalia, 7. Constantine, 8. 336 CE, 9. Pagan tree worship, 10. It was not part of pure worship, 11. Do not learn the way of the nations, 12. They nullify the word of God, 13. The Memorial, 14. Pagan sun worship, 15. Saint Nicholas, 16. A 4th-century bishop, 17. Focus on gifts and commercialism, 18. Give without expecting in return, 19. Observe the Memorial, 20. It has pagan origins</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Holidays: Easter -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Holidays: Easter</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Easter</h2>
-                    <p class="worksheet-intro">Learn why Easter does not align with Jehovah’s standards for worship.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible mention Easter?</li>
-                            <li>What pagan goddess is associated with Easter?</li>
-                            <li>What do Easter eggs symbolize?</li>
-                            <li>What is the origin of the Easter bunny?</li>
-                            <li>What event does Easter claim to celebrate?</li>
-                            <li>What did Jesus command his followers to commemorate?</li>
-                            <li>Why is the date of Easter tied to the spring equinox?</li>
-                            <li>What council fixed the date of Easter?</li>
-                            <li>In what year did this council occur?</li>
-                            <li>What does Jehovah say about adopting pagan customs?</li>
-                            <li>What did the early Christians celebrate instead of Easter?</li>
-                            <li>What does the Bible say about Jesus’ resurrection?</li>
-                            <li>How many days was Jesus in the tomb?</li>
-                            <li>What day of the week was Jesus resurrected?</li>
-                            <li>Why do some celebrate Good Friday?</li>
-                            <li>What does the Bible say about traditions of men?</li>
-                            <li>What did Paul warn about in Colossians?</li>
-                            <li>Why does Easter promote false teachings?</li>
-                            <li>What should Christians focus on instead of Easter?</li>
-                            <li>How can we honor Jesus’ resurrection?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Holidays: Easter</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Easter</h2>
+                        <p class="worksheet-intro">Learn why Easter does not align with Jehovah’s standards for worship.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible mention Easter?</li>
+                                <li>What pagan goddess is associated with Easter?</li>
+                                <li>What do Easter eggs symbolize?</li>
+                                <li>What is the origin of the Easter bunny?</li>
+                                <li>What event does Easter claim to celebrate?</li>
+                                <li>What did Jesus command his followers to commemorate?</li>
+                                <li>Why is the date of Easter tied to the spring equinox?</li>
+                                <li>What council fixed the date of Easter?</li>
+                                <li>In what year did this council occur?</li>
+                                <li>What does Jehovah say about adopting pagan customs?</li>
+                                <li>What did the early Christians celebrate instead of Easter?</li>
+                                <li>What does the Bible say about Jesus’ resurrection?</li>
+                                <li>How many days was Jesus in the tomb?</li>
+                                <li>What day of the week was Jesus resurrected?</li>
+                                <li>Why do some celebrate Good Friday?</li>
+                                <li>What does the Bible say about traditions of men?</li>
+                                <li>What did Paul warn about in Colossians?</li>
+                                <li>Why does Easter promote false teachings?</li>
+                                <li>What should Christians focus on instead of Easter?</li>
+                                <li>How can we honor Jesus’ resurrection?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. Eostre, 3. Fertility and new life, 4. Pagan fertility symbols, 5. Jesus’ resurrection, 6. His death (Memorial), 7. Pagan influence, 8. Council of Nicaea, 9. 325 CE, 10. Do not learn the way of the nations, 11. The Memorial, 12. He was raised on the third day, 13. Three days and three nights, 14. The first day of the week, 15. To mark Jesus’ death, 16. They nullify God’s word, 17. Being misled by philosophy, 18. It mixes paganism with Christianity, 19. The Memorial, 20. By preaching the good news</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. Eostre, 3. Fertility and new life, 4. Pagan fertility symbols, 5. Jesus’ resurrection, 6. His death (Memorial), 7. Pagan influence, 8. Council of Nicaea, 9. 325 CE, 10. Do not learn the way of the nations, 11. The Memorial, 12. He was raised on the third day, 13. Three days and three nights, 14. The first day of the week, 15. To mark Jesus’ death, 16. They nullify God’s word, 17. Being misled by philosophy, 18. It mixes paganism with Christianity, 19. The Memorial, 20. By preaching the good news</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Holidays: Birthdays -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">Holidays: Birthdays</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Birthdays</h2>
-                    <p class="worksheet-intro">Discover why birthdays are not part of pure worship to Jehovah.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible record any faithful servants celebrating birthdays?</li>
-                            <li>Whose birthday is mentioned in Genesis?</li>
-                            <li>What happened at Pharaoh’s birthday celebration?</li>
-                            <li>Whose birthday is mentioned in the Christian Greek Scriptures?</li>
-                            <li>What happened at Herod’s birthday celebration?</li>
-                            <li>What did Job’s children do that concerned him?</li>
-                            <li>What did Job do after his children’s celebrations?</li>
-                            <li>Why did early Christians not celebrate birthdays?</li>
-                            <li>What pagan practices are associated with birthdays?</li>
-                            <li>What does the blowing out of candles symbolize?</li>
-                            <li>Why do birthday celebrations often promote selfishness?</li>
-                            <li>What does Jehovah value more than self-exaltation?</li>
-                            <li>What did Jesus teach about humility?</li>
-                            <li>Why might birthday celebrations lead to bad associations?</li>
-                            <li>What does the Bible say about giving?</li>
-                            <li>How can we show love without celebrating birthdays?</li>
-                            <li>What celebration does Jehovah approve?</li>
-                            <li>What historical figure condemned birthday celebrations?</li>
-                            <li>Why do birthday parties often lead to excess?</li>
-                            <li>How can we honor Jehovah instead of celebrating birthdays?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">Holidays: Birthdays</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Birthdays</h2>
+                        <p class="worksheet-intro">Discover why birthdays are not part of pure worship to Jehovah.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible record any faithful servants celebrating birthdays?</li>
+                                <li>Whose birthday is mentioned in Genesis?</li>
+                                <li>What happened at Pharaoh’s birthday celebration?</li>
+                                <li>Whose birthday is mentioned in the Christian Greek Scriptures?</li>
+                                <li>What happened at Herod’s birthday celebration?</li>
+                                <li>What did Job’s children do that concerned him?</li>
+                                <li>What did Job do after his children’s celebrations?</li>
+                                <li>Why did early Christians not celebrate birthdays?</li>
+                                <li>What pagan practices are associated with birthdays?</li>
+                                <li>What does the blowing out of candles symbolize?</li>
+                                <li>Why do birthday celebrations often promote selfishness?</li>
+                                <li>What does Jehovah value more than self-exaltation?</li>
+                                <li>What did Jesus teach about humility?</li>
+                                <li>Why might birthday celebrations lead to bad associations?</li>
+                                <li>What does the Bible say about giving?</li>
+                                <li>How can we show love without celebrating birthdays?</li>
+                                <li>What celebration does Jehovah approve?</li>
+                                <li>What historical figure condemned birthday celebrations?</li>
+                                <li>Why do birthday parties often lead to excess?</li>
+                                <li>How can we honor Jehovah instead of celebrating birthdays?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. Pharaoh, 3. The baker was executed, 4. Herod, 5. John the Baptist was beheaded, 6. Feasted on their “day”, 7. Offered sacrifices for them, 8. They were pagan in origin, 9. Magic and superstition, 10. Wishing on candles, 11. They focus on self, 12. Humility, 13. The greatest must be the least, 14. They may involve worldly customs, 15. Give without expecting in return, 16. Give gifts on any day, 17. The Memorial, 18. Origen, 19. Focus on feasting and drinking, 20. Worship Him daily</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. Pharaoh, 3. The baker was executed, 4. Herod, 5. John the Baptist was beheaded, 6. Feasted on their “day”, 7. Offered sacrifices for them, 8. They were pagan in origin, 9. Magic and superstition, 10. Wishing on candles, 11. They focus on self, 12. Humility, 13. The greatest must be the least, 14. They may involve worldly customs, 15. Give without expecting in return, 16. Give gifts on any day, 17. The Memorial, 18. Origen, 19. Focus on feasting and drinking, 20. Worship Him daily</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- True Worship: God’s Name -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">True Worship: God’s Name</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">God’s Name</h2>
-                    <p class="worksheet-intro">Learn the importance of knowing and using Jehovah’s name in worship.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What is God’s personal name?</li>
-                            <li>In which scripture does Jehovah first reveal His name?</li>
-                            <li>What does the name Jehovah mean?</li>
-                            <li>How many times does Jehovah’s name appear in the Hebrew Scriptures?</li>
-                            <li>Why was Jehovah’s name removed from many Bible translations?</li>
-                            <li>What did Jesus say about making God’s name known?</li>
-                            <li>How did Jesus use Jehovah’s name?</li>
-                            <li>What does the Bible say about those who know Jehovah’s name?</li>
-                            <li>Why is it important to use Jehovah’s name?</li>
-                            <li>What did Jehovah command about His name?</li>
-                            <li>Which prophet said Jehovah’s name would be called upon?</li>
-                            <li>What does calling on Jehovah’s name mean?</li>
-                            <li>How can we sanctify Jehovah’s name?</li>
-                            <li>What prayer includes a request about Jehovah’s name?</li>
-                            <li>What does the Bible say about Jehovah’s name in the last days?</li>
-                            <li>Who will Jehovah protect in the last days?</li>
-                            <li>How did the early Christians view Jehovah’s name?</li>
-                            <li>What did Paul say about Jehovah’s name?</li>
-                            <li>Why does Satan not want us to use Jehovah’s name?</li>
-                            <li>How can we show love for Jehovah’s name?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">True Worship: God’s Name</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">God’s Name</h2>
+                        <p class="worksheet-intro">Learn the importance of knowing and using Jehovah’s name in worship.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What is God’s personal name?</li>
+                                <li>In which scripture does Jehovah first reveal His name?</li>
+                                <li>What does the name Jehovah mean?</li>
+                                <li>How many times does Jehovah’s name appear in the Hebrew Scriptures?</li>
+                                <li>Why was Jehovah’s name removed from many Bible translations?</li>
+                                <li>What did Jesus say about making God’s name known?</li>
+                                <li>How did Jesus use Jehovah’s name?</li>
+                                <li>What does the Bible say about those who know Jehovah’s name?</li>
+                                <li>Why is it important to use Jehovah’s name?</li>
+                                <li>What did Jehovah command about His name?</li>
+                                <li>Which prophet said Jehovah’s name would be called upon?</li>
+                                <li>What does calling on Jehovah’s name mean?</li>
+                                <li>How can we sanctify Jehovah’s name?</li>
+                                <li>What prayer includes a request about Jehovah’s name?</li>
+                                <li>What does the Bible say about Jehovah’s name in the last days?</li>
+                                <li>Who will Jehovah protect in the last days?</li>
+                                <li>How did the early Christians view Jehovah’s name?</li>
+                                <li>What did Paul say about Jehovah’s name?</li>
+                                <li>Why does Satan not want us to use Jehovah’s name?</li>
+                                <li>How can we show love for Jehovah’s name?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Jehovah, 2. Exodus 3:14, 3. He Causes to Become, 4. Nearly 7,000 times, 5. Due to superstition, 6. He made it known to his disciples, 7. Included it in his prayers, 8. They will be protected, 9. It draws us closer to Him, 10. Not to misuse it, 11. Joel, 12. Worshipping Him, 13. By living in harmony with it, 14. The Lord’s Prayer, 15. It will be declared, 16. Those calling on His name, 17. They used it in worship, 18. Every tongue should confess it, 19. To distance us from God, 20. Use it in prayer and preaching</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Jehovah, 2. Exodus 3:14, 3. He Causes to Become, 4. Nearly 7,000 times, 5. Due to superstition, 6. He made it known to his disciples, 7. Included it in his prayers, 8. They will be protected, 9. It draws us closer to Him, 10. Not to misuse it, 11. Joel, 12. Worshipping Him, 13. By living in harmony with it, 14. The Lord’s Prayer, 15. It will be declared, 16. Those calling on His name, 17. They used it in worship, 18. Every tongue should confess it, 19. To distance us from God, 20. Use it in prayer and preaching</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- True Worship: Creation -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">True Worship: Creation</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Creation</h2>
-                    <p class="worksheet-intro">Explore Jehovah’s creation and what it teaches us about Him.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who created the heavens and the earth?</li>
-                            <li>Over how many days did Jehovah create the earth?</li>
-                            <li>What did Jehovah create on the first day?</li>
-                            <li>What did Jehovah create on the second day?</li>
-                            <li>What did Jehovah create on the third day?</li>
-                            <li>What did Jehovah create on the fourth day?</li>
-                            <li>What did Jehovah create on the fifth day?</li>
-                            <li>What did Jehovah create on the sixth day?</li>
-                            <li>What did Jehovah say about His creation?</li>
-                            <li>Who was with Jehovah during creation?</li>
-                            <li>What role did Jesus play in creation?</li>
-                            <li>What does creation reveal about Jehovah?</li>
-                            <li>What does the Bible say about the stars?</li>
-                            <li>How does creation show Jehovah’s power?</li>
-                            <li>What scientific fact does the Bible confirm about the earth?</li>
-                            <li>Who did Jehovah create to care for the earth?</li>
-                            <li>What did Jehovah command Adam and Eve to do?</li>
-                            <li>How does creation help us worship Jehovah?</li>
-                            <li>What does Jehovah promise about the earth?</li>
-                            <li>Why should we care for Jehovah’s creation?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">True Worship: Creation</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Creation</h2>
+                        <p class="worksheet-intro">Explore Jehovah’s creation and what it teaches us about Him.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who created the heavens and the earth?</li>
+                                <li>Over how many days did Jehovah create the earth?</li>
+                                <li>What did Jehovah create on the first day?</li>
+                                <li>What did Jehovah create on the second day?</li>
+                                <li>What did Jehovah create on the third day?</li>
+                                <li>What did Jehovah create on the fourth day?</li>
+                                <li>What did Jehovah create on the fifth day?</li>
+                                <li>What did Jehovah create on the sixth day?</li>
+                                <li>What did Jehovah say about His creation?</li>
+                                <li>Who was with Jehovah during creation?</li>
+                                <li>What role did Jesus play in creation?</li>
+                                <li>What does creation reveal about Jehovah?</li>
+                                <li>What does the Bible say about the stars?</li>
+                                <li>How does creation show Jehovah’s power?</li>
+                                <li>What scientific fact does the Bible confirm about the earth?</li>
+                                <li>Who did Jehovah create to care for the earth?</li>
+                                <li>What did Jehovah command Adam and Eve to do?</li>
+                                <li>How does creation help us worship Jehovah?</li>
+                                <li>What does Jehovah promise about the earth?</li>
+                                <li>Why should we care for Jehovah’s creation?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Jehovah, 2. Six days, 3. Light, 4. The sky, 5. Dry land and vegetation, 6. Sun, moon, and stars, 7. Sea creatures and birds, 8. Land animals and humans, 9. It was very good, 10. Jesus, 11. He was the firstborn of creation, 12. His power and wisdom, 13. He calls them by name, 14. Through its vastness and complexity, 15. It hangs on nothing, 16. Adam and Eve, 17. Fill the earth and subdue it, 18. It draws us closer to Him, 19. It will stand forever, 20. It reflects our love for Him</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Jehovah, 2. Six days, 3. Light, 4. The sky, 5. Dry land and vegetation, 6. Sun, moon, and stars, 7. Sea creatures and birds, 8. Land animals and humans, 9. It was very good, 10. Jesus, 11. He was the firstborn of creation, 12. His power and wisdom, 13. He calls them by name, 14. Through its vastness and complexity, 15. It hangs on nothing, 16. Adam and Eve, 17. Fill the earth and subdue it, 18. It draws us closer to Him, 19. It will stand forever, 20. It reflects our love for Him</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- True Worship: Prayer -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">True Worship: Prayer</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Prayer</h2>
-                    <p class="worksheet-intro">Understand how prayer is a vital part of true worship to Jehovah.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who should we pray to?</li>
-                            <li>In whose name should we pray?</li>
-                            <li>What did Jesus teach about prayer?</li>
-                            <li>How often should we pray?</li>
-                            <li>What should we pray for first?</li>
-                            <li>What does Jehovah promise to those who pray?</li>
-                            <li>Why should we pray for our enemies?</li>
-                            <li>What example did Jesus set in prayer?</li>
-                            <li>Where did Jesus often pray?</li>
-                            <li>What did Jesus pray for in Gethsemane?</li>
-                            <li>Who prayed for wisdom to judge Israel?</li>
-                            <li>What did Hannah pray for?</li>
-                            <li>How did Jehovah answer Hannah’s prayer?</li>
-                            <li>What did Daniel do despite a decree against prayer?</li>
-                            <li>How did Jehovah protect Daniel after his prayers?</li>
-                            <li>What does the Bible say about the prayers of the righteous?</li>
-                            <li>Why should prayers not be repetitive?</li>
-                            <li>What attitude should we have when praying?</li>
-                            <li>How does prayer strengthen our relationship with Jehovah?</li>
-                            <li>What should we do if our prayers seem unanswered?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">True Worship: Prayer</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Prayer</h2>
+                        <p class="worksheet-intro">Understand how prayer is a vital part of true worship to Jehovah.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who should we pray to?</li>
+                                <li>In whose name should we pray?</li>
+                                <li>What did Jesus teach about prayer?</li>
+                                <li>How often should we pray?</li>
+                                <li>What should we pray for first?</li>
+                                <li>What does Jehovah promise to those who pray?</li>
+                                <li>Why should we pray for our enemies?</li>
+                                <li>What example did Jesus set in prayer?</li>
+                                <li>Where did Jesus often pray?</li>
+                                <li>What did Jesus pray for in Gethsemane?</li>
+                                <li>Who prayed for wisdom to judge Israel?</li>
+                                <li>What did Hannah pray for?</li>
+                                <li>How did Jehovah answer Hannah’s prayer?</li>
+                                <li>What did Daniel do despite a decree against prayer?</li>
+                                <li>How did Jehovah protect Daniel after his prayers?</li>
+                                <li>What does the Bible say about the prayers of the righteous?</li>
+                                <li>Why should prayers not be repetitive?</li>
+                                <li>What attitude should we have when praying?</li>
+                                <li>How does prayer strengthen our relationship with Jehovah?</li>
+                                <li>What should we do if our prayers seem unanswered?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Jehovah, 2. Jesus, 3. The model prayer, 4. Without ceasing, 5. God’s Kingdom, 6. He hears them, 7. To show love, 8. Prayed often and alone, 9. In solitary places, 10. For God’s will to be done, 11. Solomon, 12. A son, 13. Gave her Samuel, 14. Prayed three times a day, 15. Saved him from the lions, 16. They accomplish much, 17. God wants heartfelt words, 18. Humility, 19. It draws us closer to Him, 20. Keep praying and trust Jehovah</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Jehovah, 2. Jesus, 3. The model prayer, 4. Without ceasing, 5. God’s Kingdom, 6. He hears them, 7. To show love, 8. Prayed often and alone, 9. In solitary places, 10. For God’s will to be done, 11. Solomon, 12. A son, 13. Gave her Samuel, 14. Prayed three times a day, 15. Saved him from the lions, 16. They accomplish much, 17. God wants heartfelt words, 18. Humility, 19. It draws us closer to Him, 20. Keep praying and trust Jehovah</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- True Worship: Paradise -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">True Worship: Paradise</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Paradise</h2>
-                    <p class="worksheet-intro">Discover Jehovah’s promise of a paradise earth for those who worship Him.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What did Jehovah originally create for Adam and Eve?</li>
-                            <li>Why did Adam and Eve lose paradise?</li>
-                            <li>What did Jehovah promise after the Fall?</li>
-                            <li>Who will restore paradise?</li>
-                            <li>What does the Bible say about the earth’s future?</li>
-                            <li>Who will live in the paradise earth?</li>
-                            <li>What will be absent in paradise?</li>
-                            <li>What did Jesus promise the evildoer on the stake?</li>
-                            <li>What does Revelation say about paradise?</li>
-                            <li>What will happen to death in paradise?</li>
-                            <li>How will animals behave in paradise?</li>
-                            <li>What did Isaiah prophesy about the earth?</li>
-                            <li>Who will teach people in paradise?</li>
-                            <li>What will people eat in paradise?</li>
-                            <li>How will paradise fulfill Jehovah’s purpose?</li>
-                            <li>What does the Bible say about work in paradise?</li>
-                            <li>Why will there be no sickness in paradise?</li>
-                            <li>What will the resurrected ones do in paradise?</li>
-                            <li>How can we gain life in paradise?</li>
-                            <li>What does paradise show about Jehovah’s love?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">True Worship: Paradise</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Paradise</h2>
+                        <p class="worksheet-intro">Discover Jehovah’s promise of a paradise earth for those who worship Him.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What did Jehovah originally create for Adam and Eve?</li>
+                                <li>Why did Adam and Eve lose paradise?</li>
+                                <li>What did Jehovah promise after the Fall?</li>
+                                <li>Who will restore paradise?</li>
+                                <li>What does the Bible say about the earth’s future?</li>
+                                <li>Who will live in the paradise earth?</li>
+                                <li>What will be absent in paradise?</li>
+                                <li>What did Jesus promise the evildoer on the stake?</li>
+                                <li>What does Revelation say about paradise?</li>
+                                <li>What will happen to death in paradise?</li>
+                                <li>How will animals behave in paradise?</li>
+                                <li>What did Isaiah prophesy about the earth?</li>
+                                <li>Who will teach people in paradise?</li>
+                                <li>What will people eat in paradise?</li>
+                                <li>How will paradise fulfill Jehovah’s purpose?</li>
+                                <li>What does the Bible say about work in paradise?</li>
+                                <li>Why will there be no sickness in paradise?</li>
+                                <li>What will the resurrected ones do in paradise?</li>
+                                <li>How can we gain life in paradise?</li>
+                                <li>What does paradise show about Jehovah’s love?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. The Garden of Eden, 2. They disobeyed Jehovah, 3. A seed to crush the serpent, 4. Jesus, 5. It will be a paradise, 6. The meek, 7. Death, pain, and tears, 8. He would be with him in paradise, 9. No more death or pain, 10. It will be swallowed up, 11. They will be at peace, 12. It will be full of knowledge of Jehovah, 13. The faithful, 14. Fruits of the earth, 15. The earth will be filled with obedient humans, 16. People will build houses and plant vineyards, 17. Jehovah will heal all, 18. Learn about Jehovah, 19. By exercising faith, 20. He wants the best for us</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. The Garden of Eden, 2. They disobeyed Jehovah, 3. A seed to crush the serpent, 4. Jesus, 5. It will be a paradise, 6. The meek, 7. Death, pain, and tears, 8. He would be with him in paradise, 9. No more death or pain, 10. It will be swallowed up, 11. They will be at peace, 12. It will be full of knowledge of Jehovah, 13. The faithful, 14. Fruits of the earth, 15. The earth will be filled with obedient humans, 16. People will build houses and plant vineyards, 17. Jehovah will heal all, 18. Learn about Jehovah, 19. By exercising faith, 20. He wants the best for us</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- False Worship: Idolatry & Cross -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">False Worship: Idolatry & Cross</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Idolatry & Cross</h2>
-                    <p class="worksheet-intro">Learn why idolatry and the cross are not part of true worship.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What does Jehovah say about idolatry?</li>
-                            <li>What did the Israelites make at Mount Sinai?</li>
-                            <li>What happened to the golden calf?</li>
-                            <li>Who destroyed the altar of Baal in Israel?</li>
-                            <li>What did Gideon do to promote true worship?</li>
-                            <li>What does the Bible say about worshipping images?</li>
-                            <li>What pagan symbol is the cross linked to?</li>
-                            <li>Did Jesus die on a cross or a stake?</li>
-                            <li>What Greek word is used for Jesus’ execution instrument?</li>
-                            <li>What does “stauros” mean?</li>
-                            <li>Who introduced the cross into Christianity?</li>
-                            <li>In what year did the cross become a Christian symbol?</li>
-                            <li>Why is wearing a cross considered idolatry?</li>
-                            <li>What did Paul say about boasting in the cross?</li>
-                            <li>What does Jehovah want instead of image worship?</li>
-                            <li>Why did the early Christians not use the cross?</li>
-                            <li>What did Jesus say about worship?</li>
-                            <li>What does the Bible say about the fate of idolaters?</li>
-                            <li>How can we avoid idolatry today?</li>
-                            <li>Why does Jehovah hate idolatry?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">False Worship: Idolatry & Cross</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Idolatry & Cross</h2>
+                        <p class="worksheet-intro">Learn why idolatry and the cross are not part of true worship.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What does Jehovah say about idolatry?</li>
+                                <li>What did the Israelites make at Mount Sinai?</li>
+                                <li>What happened to the golden calf?</li>
+                                <li>Who destroyed the altar of Baal in Israel?</li>
+                                <li>What did Gideon do to promote true worship?</li>
+                                <li>What does the Bible say about worshipping images?</li>
+                                <li>What pagan symbol is the cross linked to?</li>
+                                <li>Did Jesus die on a cross or a stake?</li>
+                                <li>What Greek word is used for Jesus’ execution instrument?</li>
+                                <li>What does “stauros” mean?</li>
+                                <li>Who introduced the cross into Christianity?</li>
+                                <li>In what year did the cross become a Christian symbol?</li>
+                                <li>Why is wearing a cross considered idolatry?</li>
+                                <li>What did Paul say about boasting in the cross?</li>
+                                <li>What does Jehovah want instead of image worship?</li>
+                                <li>Why did the early Christians not use the cross?</li>
+                                <li>What did Jesus say about worship?</li>
+                                <li>What does the Bible say about the fate of idolaters?</li>
+                                <li>How can we avoid idolatry today?</li>
+                                <li>Why does Jehovah hate idolatry?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Do not make or worship idols, 2. A golden calf, 3. Moses destroyed it, 4. Gideon, 5. Tore down Baal’s altar, 6. It is detestable, 7. Sun worship, 8. A stake, 9. Stauros, 10. An upright stake, 11. Constantine, 12. 312 CE, 13. It is an image of worship, 14. He boasted in Jesus’ sacrifice, 15. Worship in spirit and truth, 16. It was pagan, 17. Worship in spirit and truth, 18. They will not inherit God’s Kingdom, 19. Worship only Jehovah, 20. It dishonors Him</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Do not make or worship idols, 2. A golden calf, 3. Moses destroyed it, 4. Gideon, 5. Tore down Baal’s altar, 6. It is detestable, 7. Sun worship, 8. A stake, 9. Stauros, 10. An upright stake, 11. Constantine, 12. 312 CE, 13. It is an image of worship, 14. He boasted in Jesus’ sacrifice, 15. Worship in spirit and truth, 16. It was pagan, 17. Worship in spirit and truth, 18. They will not inherit God’s Kingdom, 19. Worship only Jehovah, 20. It dishonors Him</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- False Worship: Trinity -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">False Worship: Trinity</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Trinity</h2>
-                    <p class="worksheet-intro">Understand why the Trinity doctrine is not supported by the Bible.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible teach the Trinity?</li>
-                            <li>What does the Bible say about Jehovah’s position?</li>
-                            <li>How does Jesus describe his relationship with Jehovah?</li>
-                            <li>What did Jesus say about his knowledge compared to Jehovah?</li>
-                            <li>Who did Jesus pray to?</li>
-                            <li>What does the Bible say about the holy spirit?</li>
-                            <li>Is the holy spirit described as a person?</li>
-                            <li>What council established the Trinity doctrine?</li>
-                            <li>In what year was the Trinity doctrine formalized?</li>
-                            <li>What did early Christians believe about God?</li>
-                            <li>Why was the Trinity doctrine introduced?</li>
-                            <li>What does the Bible say about false teachings?</li>
-                            <li>What did Paul warn about in his letters?</li>
-                            <li>How does the Trinity obscure Jehovah’s identity?</li>
-                            <li>What did Jesus teach about true worship?</li>
-                            <li>Why is believing in the Trinity a form of false worship?</li>
-                            <li>What does Jehovah say about other gods?</li>
-                            <li>How can we worship Jehovah in truth?</li>
-                            <li>What does the Bible say about the oneness of God?</li>
-                            <li>Why does Satan promote the Trinity?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">False Worship: Trinity</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Trinity</h2>
+                        <p class="worksheet-intro">Understand why the Trinity doctrine is not supported by the Bible.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible teach the Trinity?</li>
+                                <li>What does the Bible say about Jehovah’s position?</li>
+                                <li>How does Jesus describe his relationship with Jehovah?</li>
+                                <li>What did Jesus say about his knowledge compared to Jehovah?</li>
+                                <li>Who did Jesus pray to?</li>
+                                <li>What does the Bible say about the holy spirit?</li>
+                                <li>Is the holy spirit described as a person?</li>
+                                <li>What council established the Trinity doctrine?</li>
+                                <li>In what year was the Trinity doctrine formalized?</li>
+                                <li>What did early Christians believe about God?</li>
+                                <li>Why was the Trinity doctrine introduced?</li>
+                                <li>What does the Bible say about false teachings?</li>
+                                <li>What did Paul warn about in his letters?</li>
+                                <li>How does the Trinity obscure Jehovah’s identity?</li>
+                                <li>What did Jesus teach about true worship?</li>
+                                <li>Why is believing in the Trinity a form of false worship?</li>
+                                <li>What does Jehovah say about other gods?</li>
+                                <li>How can we worship Jehovah in truth?</li>
+                                <li>What does the Bible say about the oneness of God?</li>
+                                <li>Why does Satan promote the Trinity?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. He alone is the Most High, 3. The Father is greater than he is, 4. He does not know the day or hour, 5. Jehovah, 6. It is God’s active force, 7. No, 8. Council of Nicaea, 9. 325 CE, 10. Jehovah is the only true God, 11. To blend pagan beliefs, 12. They lead to destruction, 13. False teachers, 14. It hides His name, 15. Worship in spirit and truth, 16. It misrepresents Jehovah, 17. There is no other, 18. Know the truth, 19. Jehovah is one, 20. To confuse people</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. He alone is the Most High, 3. The Father is greater than he is, 4. He does not know the day or hour, 5. Jehovah, 6. It is God’s active force, 7. No, 8. Council of Nicaea, 9. 325 CE, 10. Jehovah is the only true God, 11. To blend pagan beliefs, 12. They lead to destruction, 13. False teachers, 14. It hides His name, 15. Worship in spirit and truth, 16. It misrepresents Jehovah, 17. There is no other, 18. Know the truth, 19. Jehovah is one, 20. To confuse people</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- False Worship: Hellfire -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">False Worship: Hellfire</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Hellfire</h2>
-                    <p class="worksheet-intro">Learn why the teaching of hellfire contradicts Jehovah’s justice.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible teach that the dead are tormented in hellfire?</li>
-                            <li>What does the Bible say about the condition of the dead?</li>
-                            <li>What is the Hebrew word for the grave?</li>
-                            <li>What does “Sheol” mean?</li>
-                            <li>What is the Greek word for the grave?</li>
-                            <li>What does “Hades” mean?</li>
-                            <li>What does the Bible say about the punishment for sin?</li>
-                            <li>What did Jesus say about the soul?</li>
-                            <li>Who introduced the idea of hellfire into Christianity?</li>
-                            <li>What pagan beliefs influenced the hellfire doctrine?</li>
-                            <li>What does Jehovah say about burning people?</li>
-                            <li>What did Jesus’ parable of the rich man and Lazarus mean?</li>
-                            <li>Why does the hellfire doctrine misrepresent Jehovah?</li>
-                            <li>What does the Bible say about Gehenna?</li>
-                            <li>What happened to things thrown into Gehenna?</li>
-                            <li>What does the Bible say about the fate of the wicked?</li>
-                            <li>Why does Satan promote the hellfire doctrine?</li>
-                            <li>What does Jehovah promise for the future?</li>
-                            <li>How can we trust Jehovah’s justice?</li>
-                            <li>What should we teach about the dead?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">False Worship: Hellfire</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Hellfire</h2>
+                        <p class="worksheet-intro">Learn why the teaching of hellfire contradicts Jehovah’s justice.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible teach that the dead are tormented in hellfire?</li>
+                                <li>What does the Bible say about the condition of the dead?</li>
+                                <li>What is the Hebrew word for the grave?</li>
+                                <li>What does “Sheol” mean?</li>
+                                <li>What is the Greek word for the grave?</li>
+                                <li>What does “Hades” mean?</li>
+                                <li>What does the Bible say about the punishment for sin?</li>
+                                <li>What did Jesus say about the soul?</li>
+                                <li>Who introduced the idea of hellfire into Christianity?</li>
+                                <li>What pagan beliefs influenced the hellfire doctrine?</li>
+                                <li>What does Jehovah say about burning people?</li>
+                                <li>What did Jesus’ parable of the rich man and Lazarus mean?</li>
+                                <li>Why does the hellfire doctrine misrepresent Jehovah?</li>
+                                <li>What does the Bible say about Gehenna?</li>
+                                <li>What happened to things thrown into Gehenna?</li>
+                                <li>What does the Bible say about the fate of the wicked?</li>
+                                <li>Why does Satan promote the hellfire doctrine?</li>
+                                <li>What does Jehovah promise for the future?</li>
+                                <li>How can we trust Jehovah’s justice?</li>
+                                <li>What should we teach about the dead?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. They are unconscious, 3. Sheol, 4. The common grave, 5. Hades, 6. The common grave, 7. Death, 8. It can be destroyed, 9. Early church leaders, 10. Greek and Roman mythology, 11. It never came into His heart, 12. A change in spiritual status, 13. It portrays Him as cruel, 14. A place of destruction, 15. They were burned up, 16. They will be destroyed, 17. To slander Jehovah, 18. Resurrection and paradise, 19. He is love, 20. They sleep in death</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. They are unconscious, 3. Sheol, 4. The common grave, 5. Hades, 6. The common grave, 7. Death, 8. It can be destroyed, 9. Early church leaders, 10. Greek and Roman mythology, 11. It never came into His heart, 12. A change in spiritual status, 13. It portrays Him as cruel, 14. A place of destruction, 15. They were burned up, 16. They will be destroyed, 17. To slander Jehovah, 18. Resurrection and paradise, 19. He is love, 20. They sleep in death</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- False Worship: Immortality -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">False Worship: Immortality</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Immortality</h2>
-                    <p class="worksheet-intro">Understand why the immortality of the soul is a false teaching.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Does the Bible teach that the soul is immortal?</li>
-                            <li>What does the Bible say about the soul that sins?</li>
-                            <li>What did Jehovah tell Adam about death?</li>
-                            <li>What is the soul according to the Bible?</li>
-                            <li>Can the soul be destroyed?</li>
-                            <li>What does the Bible say about the dead?</li>
-                            <li>What pagan belief influenced the immortality doctrine?</li>
-                            <li>Who introduced the idea of an immortal soul into Christianity?</li>
-                            <li>What does the Bible say about the hope for the dead?</li>
-                            <li>What did Jesus say about the resurrection?</li>
-                            <li>Who has immortality according to the Bible?</li>
-                            <li>What does the Bible say about the body and spirit?</li>
-                            <li>Why does the immortality doctrine dishonor Jehovah?</li>
-                            <li>What did Paul say about the resurrection?</li>
-                            <li>What does the Bible say about the fate of the wicked?</li>
-                            <li>Why does Satan promote the immortality doctrine?</li>
-                            <li>What does Jehovah promise for the faithful?</li>
-                            <li>How can we gain everlasting life?</li>
-                            <li>What did Jesus teach about life?</li>
-                            <li>Why is the resurrection hope better than immortality?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">False Worship: Immortality</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Immortality</h2>
+                        <p class="worksheet-intro">Understand why the immortality of the soul is a false teaching.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Does the Bible teach that the soul is immortal?</li>
+                                <li>What does the Bible say about the soul that sins?</li>
+                                <li>What did Jehovah tell Adam about death?</li>
+                                <li>What is the soul according to the Bible?</li>
+                                <li>Can the soul be destroyed?</li>
+                                <li>What does the Bible say about the dead?</li>
+                                <li>What pagan belief influenced the immortality doctrine?</li>
+                                <li>Who introduced the idea of an immortal soul into Christianity?</li>
+                                <li>What does the Bible say about the hope for the dead?</li>
+                                <li>What did Jesus say about the resurrection?</li>
+                                <li>Who has immortality according to the Bible?</li>
+                                <li>What does the Bible say about the body and spirit?</li>
+                                <li>Why does the immortality doctrine dishonor Jehovah?</li>
+                                <li>What did Paul say about the resurrection?</li>
+                                <li>What does the Bible say about the fate of the wicked?</li>
+                                <li>Why does Satan promote the immortality doctrine?</li>
+                                <li>What does Jehovah promise for the faithful?</li>
+                                <li>How can we gain everlasting life?</li>
+                                <li>What did Jesus teach about life?</li>
+                                <li>Why is the resurrection hope better than immortality?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. No, 2. It will die, 3. He would return to dust, 4. A living creature, 5. Yes, 6. They know nothing, 7. Greek philosophy, 8. Plato, 9. The resurrection, 10. They will rise, 11. Jehovah, 12. The spirit returns to God, 13. It denies the resurrection, 14. The dead will rise, 15. They will perish, 16. To deny the resurrection, 17. Everlasting life, 18. Through faith in Jesus, 19. He is the resurrection and the life, 20. It relies on Jehovah’s power</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. No, 2. It will die, 3. He would return to dust, 4. A living creature, 5. Yes, 6. They know nothing, 7. Greek philosophy, 8. Plato, 9. The resurrection, 10. They will rise, 11. Jehovah, 12. The spirit returns to God, 13. It denies the resurrection, 14. The dead will rise, 15. They will perish, 16. To deny the resurrection, 17. Everlasting life, 18. Through faith in Jesus, 19. He is the resurrection and the life, 20. It relies on Jehovah’s power</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Preserving Jehovah’s Word -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">JWL: Translation</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Preserving Jehovah’s Word</h2>
-                    <p class="worksheet-intro">Learn how Jehovah’s Word was preserved through ancient writings and translations.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>How many times does “YHWH” appear in the Hebrew Scriptures?</li>
-                            <li>Who wrote the Ten Commandments by Jehovah’s hand?</li>
-                            <li>What Greek translation retained “YHWH” in early copies?</li>
-                            <li>What uninspired texts did the Septuagint include?</li>
-                            <li>Which codex occasionally preserved “YHWH” in Hebrew script?</li>
-                            <li>What did Codex Vaticanus replace “YHWH” with?</li>
-                            <li>Who translated the Latin Vulgate?</li>
-                            <li>What did the Vulgate replace “YHWH” with?</li>
-                            <li>What discovery confirmed “YHWH” in the oldest writings?</li>
-                            <li>Which Dead Sea Scroll prominently uses “YHWH”?</li>
-                            <li>Who produced the first English Bible?</li>
-                            <li>What translation used “Jehovah” in Exodus 6:3?</li>
-                            <li>What spurious passage did the King James Version include?</li>
-                            <li>Which translation restored “Jehovah” in the Old Testament?</li>
-                            <li>What liberal rendering did the Revised Standard Version use for Isaiah 7:14?</li>
-                            <li>Which popular translation omitted “Jehovah” entirely?</li>
-                            <li>How many times does the New World Translation restore “Jehovah”?</li>
-                            <li>What uninspired passage does the NWT omit?</li>
-                            <li>Which ancient codices does the NWT rely on for the Christian Scriptures?</li>
-                            <li>How many languages is the NWT available in?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">JWL: Translation</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Preserving Jehovah’s Word</h2>
+                        <p class="worksheet-intro">Learn how Jehovah’s Word was preserved through ancient writings and translations.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>How many times does “YHWH” appear in the Hebrew Scriptures?</li>
+                                <li>Who wrote the Ten Commandments by Jehovah’s hand?</li>
+                                <li>What Greek translation retained “YHWH” in early copies?</li>
+                                <li>What uninspired texts did the Septuagint include?</li>
+                                <li>Which codex occasionally preserved “YHWH” in Hebrew script?</li>
+                                <li>What did Codex Vaticanus replace “YHWH” with?</li>
+                                <li>Who translated the Latin Vulgate?</li>
+                                <li>What did the Vulgate replace “YHWH” with?</li>
+                                <li>What discovery confirmed “YHWH” in the oldest writings?</li>
+                                <li>Which Dead Sea Scroll prominently uses “YHWH”?</li>
+                                <li>Who produced the first English Bible?</li>
+                                <li>What translation used “Jehovah” in Exodus 6:3?</li>
+                                <li>What spurious passage did the King James Version include?</li>
+                                <li>Which translation restored “Jehovah” in the Old Testament?</li>
+                                <li>What liberal rendering did the Revised Standard Version use for Isaiah 7:14?</li>
+                                <li>Which popular translation omitted “Jehovah” entirely?</li>
+                                <li>How many times does the New World Translation restore “Jehovah”?</li>
+                                <li>What uninspired passage does the NWT omit?</li>
+                                <li>Which ancient codices does the NWT rely on for the Christian Scriptures?</li>
+                                <li>How many languages is the NWT available in?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. 6,973, 2. Moses, 3. Septuagint, 4. Apocrypha, 5. Codex Sinaiticus, 6. Kyrios, 7. Jerome, 8. Dominus, 9. Dead Sea Scrolls, 10. Great Isaiah Scroll, 11. John Wycliffe, 12. Tyndale Bible, 13. 1 John 5:7, 14. American Standard Version, 15. Young woman, 16. New International Version, 17. 7,237, 18. Mark 16:9-20, 19. Sinaiticus and Vaticanus, 20. Over 200</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. 6,973, 2. Moses, 3. Septuagint, 4. Apocrypha, 5. Codex Sinaiticus, 6. Kyrios, 7. Jerome, 8. Dominus, 9. Dead Sea Scrolls, 10. Great Isaiah Scroll, 11. John Wycliffe, 12. Tyndale Bible, 13. 1 John 5:7, 14. American Standard Version, 15. Young woman, 16. New International Version, 17. 7,237, 18. Mark 16:9-20, 19. Sinaiticus and Vaticanus, 20. Over 200</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Unshakable Faith in Jehovah’s Kingdom -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">JWL: Unshakable</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Unshakable Faith in Jehovah’s Kingdom</h2>
-                    <p class="worksheet-intro">Explore how faithful ones maintain unshakable faith through trials, preparing for Jehovah’s Kingdom.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What does Hebrews 12:28 say we are receiving?</li>
-                            <li>Who was martyred in 33 CE for his wisdom in preaching?</li>
-                            <li>In what year did Daniel face the lions’ den?</li>
-                            <li>Who faced ridicule while rebuilding Jerusalem’s walls?</li>
-                            <li>What did Noah endure as a preacher of righteousness?</li>
-                            <li>Whose brothers did not initially exercise faith in him?</li>
-                            <li>Who remained faithful despite family challenges in the 1st century?</li>
-                            <li>In what year did Joseph resist temptation in Egypt?</li>
-                            <li>Who endured loss around 1473 BCE, praising Jehovah?</li>
-                            <li>Who declared, “I have fought the fine fight,” in the 1st century?</li>
-                            <li>Who overcame doubt in 1107 BCE to lead Israel?</li>
-                            <li>Who was reassured by Jesus to become believing in 33 CE?</li>
-                            <li>In what year did Daniel’s companions refuse to bow to an image?</li>
-                            <li>Who showed courage to save her people in 475 BCE?</li>
-                            <li>Who sang praises in prison in 50 CE?</li>
-                            <li>In what year did Habakkuk rejoice despite hardship?</li>
-                            <li>Who proved his faith by offering up Isaac?</li>
-                            <li>What did Daniel do despite a prayer ban in 537 BCE?</li>
-                            <li>What prepares the faithful for the new earth?</li>
-                            <li>What command did Jesus give to make disciples?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">JWL: Unshakable</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Unshakable Faith in Jehovah’s Kingdom</h2>
+                        <p class="worksheet-intro">Explore how faithful ones maintain unshakable faith through trials, preparing for Jehovah’s Kingdom.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What does Hebrews 12:28 say we are receiving?</li>
+                                <li>Who was martyred in 33 CE for his wisdom in preaching?</li>
+                                <li>In what year did Daniel face the lions’ den?</li>
+                                <li>Who faced ridicule while rebuilding Jerusalem’s walls?</li>
+                                <li>What did Noah endure as a preacher of righteousness?</li>
+                                <li>Whose brothers did not initially exercise faith in him?</li>
+                                <li>Who remained faithful despite family challenges in the 1st century?</li>
+                                <li>In what year did Joseph resist temptation in Egypt?</li>
+                                <li>Who endured loss around 1473 BCE, praising Jehovah?</li>
+                                <li>Who declared, “I have fought the fine fight,” in the 1st century?</li>
+                                <li>Who overcame doubt in 1107 BCE to lead Israel?</li>
+                                <li>Who was reassured by Jesus to become believing in 33 CE?</li>
+                                <li>In what year did Daniel’s companions refuse to bow to an image?</li>
+                                <li>Who showed courage to save her people in 475 BCE?</li>
+                                <li>Who sang praises in prison in 50 CE?</li>
+                                <li>In what year did Habakkuk rejoice despite hardship?</li>
+                                <li>Who proved his faith by offering up Isaac?</li>
+                                <li>What did Daniel do despite a prayer ban in 537 BCE?</li>
+                                <li>What prepares the faithful for the new earth?</li>
+                                <li>What command did Jesus give to make disciples?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Unshakable Kingdom, 2. Stephen, 3. 537 BCE, 4. Nehemiah, 5. Mockery, 6. Jesus, 7. Timothy, 8. 1711 BCE, 9. Job, 10. Paul, 11. Gideon, 12. Thomas, 13. 607 BCE, 14. Esther, 15. Paul and Silas, 16. 607 BCE, 17. Abraham, 18. Kept praying, 19. Endurance, 20. Go, therefore, and make disciples</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Unshakable Kingdom, 2. Stephen, 3. 537 BCE, 4. Nehemiah, 5. Mockery, 6. Jesus, 7. Timothy, 8. 1711 BCE, 9. Job, 10. Paul, 11. Gideon, 12. Thomas, 13. 607 BCE, 14. Esther, 15. Paul and Silas, 16. 607 BCE, 17. Abraham, 18. Kept praying, 19. Endurance, 20. Go, therefore, and make disciples</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Vindicating Jehovah’s Name -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">JWL: Vindicated</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Vindicating Jehovah’s Name</h2>
-                    <p class="worksheet-intro">Discover how biblical truth and archaeological evidence uphold Jehovah’s sovereignty and name.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>What issue does Satan’s challenge in Eden raise?</li>
-                            <li>Who proved Satan’s accusation wrong by enduring suffering?</li>
-                            <li>In what year was Christ’s Kingdom established?</li>
-                            <li>What is the earliest extra-biblical evidence of “YHWH”?</li>
-                            <li>Who inscribed the Moabite Stone?</li>
-                            <li>What did the Moabite Stone mention capturing?</li>
-                            <li>What artifacts from c. 600 BCE bear blessings with “YHWH”?</li>
-                            <li>What phrase appears in the Lachish Letters invoking “YHWH”?</li>
-                            <li>Where were the Dead Sea Scrolls discovered?</li>
-                            <li>Which Dead Sea Scroll uses “YHWH” in Isaiah 42:8?</li>
-                            <li>What Septuagint fragment retains “YHWH” in Hebrew?</li>
-                            <li>Where is Papyrus Fouad 266 stored?</li>
-                            <li>Which codex occasionally preserves “YHWH” in Hebrew script?</li>
-                            <li>What uninspired texts did Codex Sinaiticus include?</li>
-                            <li>Which Masoretic codex is housed in the Israel Museum?</li>
-                            <li>How many times does the Leningrad Codex use “YHWH”?</li>
-                            <li>Who used “Jehovah” in his 1530 Pentateuch translation?</li>
-                            <li>What did Henry Ainsworth emphasize in his Psalms annotations?</li>
-                            <li>How many times does the New World Translation restore “Jehovah”?</li>
-                            <li>How many copies of the New World Translation have been printed?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">JWL: Vindicated</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Vindicating Jehovah’s Name</h2>
+                        <p class="worksheet-intro">Discover how biblical truth and archaeological evidence uphold Jehovah’s sovereignty and name.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>What issue does Satan’s challenge in Eden raise?</li>
+                                <li>Who proved Satan’s accusation wrong by enduring suffering?</li>
+                                <li>In what year was Christ’s Kingdom established?</li>
+                                <li>What is the earliest extra-biblical evidence of “YHWH”?</li>
+                                <li>Who inscribed the Moabite Stone?</li>
+                                <li>What did the Moabite Stone mention capturing?</li>
+                                <li>What artifacts from c. 600 BCE bear blessings with “YHWH”?</li>
+                                <li>What phrase appears in the Lachish Letters invoking “YHWH”?</li>
+                                <li>Where were the Dead Sea Scrolls discovered?</li>
+                                <li>Which Dead Sea Scroll uses “YHWH” in Isaiah 42:8?</li>
+                                <li>What Septuagint fragment retains “YHWH” in Hebrew?</li>
+                                <li>Where is Papyrus Fouad 266 stored?</li>
+                                <li>Which codex occasionally preserves “YHWH” in Hebrew script?</li>
+                                <li>What uninspired texts did Codex Sinaiticus include?</li>
+                                <li>Which Masoretic codex is housed in the Israel Museum?</li>
+                                <li>How many times does the Leningrad Codex use “YHWH”?</li>
+                                <li>Who used “Jehovah” in his 1530 Pentateuch translation?</li>
+                                <li>What did Henry Ainsworth emphasize in his Psalms annotations?</li>
+                                <li>How many times does the New World Translation restore “Jehovah”?</li>
+                                <li>How many copies of the New World Translation have been printed?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Universal sovereignty, 2. Job, 3. 1914, 4. Moabite Stone, 5. King Mesha, 6. Vessels of YHWH, 7. Silver Scrolls, 8. May YHWH cause my lord to hear tidings of peace, 9. Qumran caves, 10. Great Isaiah Scroll, 11. Papyrus Fouad 266, 12. Cairo Museum, 13. Codex Sinaiticus, 14. Apocrypha, 15. Aleppo Codex, 16. 6,973, 17. William Tyndale, 18. Jehovah’s name, 19. 7,237, 20. Over 240 million</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Universal sovereignty, 2. Job, 3. 1914, 4. Moabite Stone, 5. King Mesha, 6. Vessels of YHWH, 7. Silver Scrolls, 8. May YHWH cause my lord to hear tidings of peace, 9. Qumran caves, 10. Great Isaiah Scroll, 11. Papyrus Fouad 266, 12. Cairo Museum, 13. Codex Sinaiticus, 14. Apocrypha, 15. Aleppo Codex, 16. 6,973, 17. William Tyndale, 18. Jehovah’s name, 19. 7,237, 20. Over 240 million</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
 
         <!-- Restoring Pure Worship -->
-        <section class="unit">
-            <details>
-                <summary class="unit-button">JWL: Watchtower</summary>
-                <div class="unit-content">
-                    <h2 class="worksheet-title">Restoring Pure Worship</h2>
-                    <p class="worksheet-intro">Explore how faithful individuals battled apostasy to restore pure worship to Jehovah.</p>
-                    <div class="questions">
-                        <ol>
-                            <li>Who stood firm against pagan festivals like Saturnalia?</li>
-                            <li>What did Polycarp declare before his martyrdom?</li>
-                            <li>Who opposed the Trinity doctrine at the Council of Nicaea?</li>
-                            <li>What unbiblical concept did Constantine promote?</li>
-                            <li>Who translated the Latin Vulgate, preserving scripture?</li>
-                            <li>What did Jerome replace “YHWH” with in the Vulgate?</li>
-                            <li>Who led the Waldensians to translate the Bible into vernacular languages?</li>
-                            <li>Where did the Waldensians hide their manuscripts?</li>
-                            <li>Who produced the first complete English Bible?</li>
-                            <li>What unscriptural practices did Jan Hus reject?</li>
-                            <li>Who used “Jehovah” in translating the Pentateuch?</li>
-                            <li>What false doctrines did Henry Grew reject?</li>
-                            <li>Who taught the hope of an earthly resurrection?</li>
-                            <li>Who founded the Watch Tower Society?</li>
-                            <li>What year did Charles Taze Russell predict for Christ’s enthronement?</li>
-                            <li>Who named the group Jehovah’s Witnesses?</li>
-                            <li>How many Supreme Court cases did Rutherford win?</li>
-                            <li>Who oversaw the release of the New World Translation?</li>
-                            <li>What school did Nathan H. Knorr found for missionaries?</li>
-                            <li>Approximately how many Jehovah’s Witnesses were active in 2024?</li>
-                        </ol>
+        <section class="item">
+            <div class="item">
+                <details>
+                    <summary class="item-button">JWL: Watchtower</summary>
+                    <div class="item-content">
+                        <h2 class="worksheet-title">Restoring Pure Worship</h2>
+                        <p class="worksheet-intro">Explore how faithful individuals battled apostasy to restore pure worship to Jehovah.</p>
+                        <div class="questions">
+                            <ol>
+                                <li>Who stood firm against pagan festivals like Saturnalia?</li>
+                                <li>What did Polycarp declare before his martyrdom?</li>
+                                <li>Who opposed the Trinity doctrine at the Council of Nicaea?</li>
+                                <li>What unbiblical concept did Constantine promote?</li>
+                                <li>Who translated the Latin Vulgate, preserving scripture?</li>
+                                <li>What did Jerome replace “YHWH” with in the Vulgate?</li>
+                                <li>Who led the Waldensians to translate the Bible into vernacular languages?</li>
+                                <li>Where did the Waldensians hide their manuscripts?</li>
+                                <li>Who produced the first complete English Bible?</li>
+                                <li>What unscriptural practices did Jan Hus reject?</li>
+                                <li>Who used “Jehovah” in translating the Pentateuch?</li>
+                                <li>What false doctrines did Henry Grew reject?</li>
+                                <li>Who taught the hope of an earthly resurrection?</li>
+                                <li>Who founded the Watch Tower Society?</li>
+                                <li>What year did Charles Taze Russell predict for Christ’s enthronement?</li>
+                                <li>Who named the group Jehovah’s Witnesses?</li>
+                                <li>How many Supreme Court cases did Rutherford win?</li>
+                                <li>Who oversaw the release of the New World Translation?</li>
+                                <li>What school did Nathan H. Knorr found for missionaries?</li>
+                                <li>Approximately how many Jehovah’s Witnesses were active in 2024?</li>
+                            </ol>
+                        </div>
+                        <button class="print-btn">Print Worksheet</button>
+                        <div class="answers">
+                            <p>1. Polycarp, 2. I am a Christian, 3. Arius, 4. The Trinity, 5. Jerome, 6. Dominus, 7. Peter Waldo, 8. The Alps, 9. John Wycliffe, 10. Indulgences, 11. William Tyndale, 12. Trinity and hellfire, 13. George Storrs, 14. Charles Taze Russell, 15. 1914, 16. Joseph Franklin Rutherford, 17. 43, 18. Nathan H. Knorr, 19. Gilead School, 20. 9 million</p>
+                        </div>
                     </div>
-                    <button class="print-btn" onclick="printWorksheet(this)">Print Worksheet</button>
-                    <div class="answers">
-                        <p>1. Polycarp, 2. I am a Christian, 3. Arius, 4. The Trinity, 5. Jerome, 6. Dominus, 7. Peter Waldo, 8. The Alps, 9. John Wycliffe, 10. Indulgences, 11. William Tyndale, 12. Trinity and hellfire, 13. George Storrs, 14. Charles Taze Russell, 15. 1914, 16. Joseph Franklin Rutherford, 17. 43, 18. Nathan H. Knorr, 19. Gilead School, 20. 9 million</p>
-                    </div>
-                </div>
-            </details>
+                </details>
+            </div>
         </section>
     </main>
 
@@ -961,87 +995,117 @@
     </footer>
 
     <script>
-        function printWorksheet(button) {
-            const unitContent = button.closest('.unit-content');
-            const printWindow = window.open('', '_blank');
-            printWindow.document.write(`
-                <html>
-                <head>
-                    <title>Print Worksheet</title>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            margin: 0;
-                            padding: 20px;
-                            color: #000000;
-                            height: 100vh;
-                            overflow: hidden;
-                        }
-                        .worksheet-title {
-                            font-family: 'Audiowide', sans-serif;
-                            font-size: 24px;
-                            color: #000000;
-                            text-align: center;
-                            margin: 10px 0;
-                        }
-                        .worksheet-intro {
-                            font-style: italic;
-                            text-align: center;
-                            margin-bottom: 20px;
-                            color: #000000;
-                        }
-                        .questions {
-                            margin: 20px 0;
-                            text-align: left;
-                            max-width: 600px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                        .questions ol {
-                            padding-left: 20px;
-                        }
-                        .questions li {
-                            margin-bottom: 10px;
-                            text-align: left;
-                            color: #000000;
-                        }
-                        .answers {
-                            margin-top: 20px;
-                            padding: 10px;
-                            border-top: 1px solid #000000;
-                            text-align: center;
-                            transform: rotate(180deg);
-                            font-size: 12px;
-                            color: #000000;
-                        }
-                        .answers p {
-                            margin: 5px 0;
-                        }
-                        @page {
-                            size: 8.5in 11in;
-                            margin: 0.5in;
-                        }
-                    </style>
-                </head>
-                <body>
-                    ${unitContent.innerHTML.replace(/<button class="print-btn".*?button>/, '')}
-                </body>
-                </html>
-            `);
-            printWindow.document.close();
-            printWindow.focus();
-            printWindow.print();
-            printWindow.close();
-        }
-
-        // Diagnostic to ensure details elements are interactive
-        document.querySelectorAll('details').forEach(details => {
-            details.addEventListener('toggle', () => {
-                if (details.open) {
-                    console.log('Details opened:', details.querySelector('.unit-button').textContent);
-                } else {
-                    console.log('Details closed:', details.querySelector('.unit-button').textContent);
+        // Ensure DOM is fully loaded before executing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Print Worksheet Function
+            window.printWorksheet = function(button) {
+                try {
+                    const itemContent = button.closest('.item-content');
+                    const item = itemContent.closest('.item');
+                    if (!itemContent || !item) {
+                        console.error('No .item-content or .item found for print button');
+                        return;
+                    }
+                    const printWindow = window.open('', '_blank');
+                    if (!printWindow) {
+                        console.error('Failed to open print window');
+                        return;
+                    }
+                    printWindow.document.write(`
+                        <html>
+                        <head>
+                            <title>Print Worksheet</title>
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    margin: 0;
+                                    padding: 20px;
+                                    color: #000;
+                                    height: 100vh;
+                                    overflow: hidden;
+                                }
+                                .worksheet-title {
+                                    font-family: 'Audiowide', sans-serif;
+                                    font-size: 24px;
+                                    color: #000;
+                                    text-align: center;
+                                    margin: 10px 0;
+                                }
+                                .worksheet-intro {
+                                    font-style: italic;
+                                    text-align: center;
+                                    margin-bottom: 20px;
+                                }
+                                .questions {
+                                    margin: 20px 0;
+                                    text-align: left;
+                                    max-width: 600px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+                                .questions ol {
+                                    padding-left: 20px;
+                                }
+                                .questions li {
+                                    margin-bottom: 10px;
+                                    text-align: left;
+                                }
+                                .answers {
+                                    margin-top: 20px;
+                                    padding: 10px;
+                                    border-top: 1px solid #000;
+                                    text-align: center;
+                                    transform: rotate(180deg);
+                                    -webkit-transform: rotate(180deg);
+                                    -moz-transform: rotate(180deg);
+                                    font-size: 12px;
+                                    color: #000;
+                                }
+                                .answers p {
+                                    margin: 5px 0;
+                                }
+                                @page {
+                                    size: 8.5in 11in;
+                                    margin: 0.5in;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            ${itemContent.innerHTML.replace(/<button class="print-btn".*?button>/, '')}
+                        </body>
+                        </html>
+                    `);
+                    printWindow.document.close();
+                    printWindow.focus();
+                    printWindow.print();
+                    printWindow.close();
+                } catch (error) {
+                    console.error('Print error:', error);
                 }
+            };
+
+            // Attach print button event listeners dynamically
+            document.querySelectorAll('.print-btn').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    printWorksheet(this);
+                });
+            });
+
+            // Diagnostic to ensure details elements are interactive
+            document.querySelectorAll('details').forEach(details => {
+                details.addEventListener('toggle', () => {
+                    try {
+                        const buttonText = details.querySelector('.item-button')?.textContent || 'Unknown';
+                        if (details.open) {
+                            console.log('Details opened:', buttonText);
+                        } else {
+                            console.log('Details closed:', buttonText);
+                        }
+                    } catch (error) {
+                        console.error('Toggle error:', error);
+                    }
+                });
             });
         });
     </script>
