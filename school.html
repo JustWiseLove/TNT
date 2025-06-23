@@ -146,6 +146,17 @@
                 margin: 0.5in;
             }
         }
+
+        /* Fallback to ensure details interactivity */
+        details {
+            display: block;
+        }
+        summary {
+            cursor: pointer;
+        }
+        .unit-button {
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body>
@@ -951,9 +962,7 @@
 
     <script>
         function printWorksheet(button) {
-            // Get the parent unit-content div
             const unitContent = button.closest('.unit-content');
-            // Create a new window for printing
             const printWindow = window.open('', '_blank');
             printWindow.document.write(`
                 <html>
@@ -1024,6 +1033,17 @@
             printWindow.print();
             printWindow.close();
         }
+
+        // Diagnostic to ensure details elements are interactive
+        document.querySelectorAll('details').forEach(details => {
+            details.addEventListener('toggle', () => {
+                if (details.open) {
+                    console.log('Details opened:', details.querySelector('.unit-button').textContent);
+                } else {
+                    console.log('Details closed:', details.querySelector('.unit-button').textContent);
+                }
+            });
+        });
     </script>
 </body>
 </html>
