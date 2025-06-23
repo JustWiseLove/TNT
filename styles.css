@@ -1,0 +1,423 @@
+:root {
+    --Dark: #004800;
+    --Green: #008000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    touch-action: pan-x pan-y; /* Allows scrolling but disables pinch-zoom */
+    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjustment */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+    color: #fff;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo h1 {
+    font-family: 'Audiowide', Arial, sans-serif;
+    color: #000000;
+    font-size: 48px;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.hamburger-left, .hamburger-right {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.hamburger-left span, .hamburger-right span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000000;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-left.active span:nth-child(1), .hamburger-right.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-left.active span:nth-child(2), .hamburger-right.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-left.active span:nth-child(3), .hamburger-right.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu-left, .nav-menu-right {
+    display: none;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    background: #000000;
+    border-radius: 5px;
+}
+
+.nav-menu-left {
+    left: 20px;
+}
+
+.nav-menu-right {
+    right: 20px;
+    text-align: right;
+}
+
+.nav-menu-left.active, .nav-menu-right.active {
+    display: block;
+}
+
+.nav-menu-left li, .nav-menu-right li {
+    list-style: none;
+    padding: 15px 20px;
+}
+
+.nav-menu-left li a, .nav-menu-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu-left li a:hover, .nav-menu-right li a:hover {
+    color: #d4af37;
+}
+
+main.main-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.top-section {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    margin: 5px 0;
+    /*border-radius: 8px;*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.search-section {
+    width: 100%;
+    text-align: center;
+}
+
+.search-content {
+    display: flex;
+    justify-content: center;
+}
+
+.search-content input {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background: #ffffff;
+    text-align: center;
+}
+
+.search-content input::placeholder {
+    color: #666666;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.tab-button:hover {
+    background: var(--Green);
+    color: #000000;
+}
+
+.tab-button.active {
+    background: var(--Green);
+    color: #000000;
+    box-shadow: 0 0 10px var(--Green);
+}
+
+.tab-button.match-highlight {
+    background: #ffd800;
+    color: #000000;
+}
+
+.tab-button[href] {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.list {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.list#search-results, .list#topics, .list#people, .list#articles, .list#sections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.item {
+    background: none;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item-button {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.item-button:hover {
+    background: var(--Green);
+    color: #000000;
+}
+
+.content {
+    display: none;
+    background: #000000;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.content.active {
+    display: block;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.content p.reference {
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.scripture-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scripture-section li {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.description-section {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.description-section p {
+    margin: 10px 0;
+}
+
+.highlight {
+    background: #ffd700;
+    color: #000000;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.bear-image {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 5px auto;
+    /*border-radius: 8px;*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    width: 100%;
+    margin-top: 5px !important;
+    padding: 0;
+}
+
+.house-image {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 5px auto;
+    /*border-radius: 8px;*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    width: 100%;
+    margin-top: 5px !important;
+    padding: 0;
+}
+
+footer {
+    background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+    text-align: center;
+    padding: 2px;
+    color: #000000;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+.placeholder {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    margin: 15px 0;
+    max-width: 800px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 42px;
+    }
+
+    .search-content input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .tab-button {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+
+    .item-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .bear-image {
+        margin: 5px auto;
+    }
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000000;
+    padding: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    background: #000000;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.hamburger-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Audiowide', Arial, sans-serif;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.hamburger-menu a:hover {
+    color: #d4af37;
+}
