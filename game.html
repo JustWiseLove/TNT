@@ -12,6 +12,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Fallback styles to ensure visibility */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .intro, .featured-article {
+            background: linear-gradient(90deg, #004800, #008000, #004800);
+            padding: 20px;
+            margin: 5px 0;
+            text-align: center;
+            color: #000000;
+        }
+        .unit {
+            background: #000000;
+            border-radius: 5px;
+            margin: 10px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            max-width: 800px;
+            width: 100%;
+        }
+        .unit-button {
+            width: 100%;
+            padding: 15px;
+            background: #008000;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Audiowide', Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s;
+        }
+        .unit-button:hover {
+            background: #006400;
+        }
+        .article-preview {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #000000;
+        }
+        .preview-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,47 +80,42 @@
                 </div>
             </div>
         </section>
+
         <section class="featured-article">
             <div class="article-preview">
                 <i class="fa-solid fa-gamepad"></i>
                 <p class="preview-text">Enjoy recreational activities inspired by spiritual wisdom, offering fun and reflection for all ages.</p>
             </div>
         </section>
+
         <section class="carousel-container" id="categories">
-            <div class="carousel">
-                <div class="carousel-track">
-                    <div class="category" data-gradient="1">
-                        <a href="dig.html">
-                            <i class="fas fa-gem"></i>
-                            <h3>Dig</h3>
-                            <p>Explore treasure with our mining game.</p>
-                        </a>
-                    </div>
-                    <div class="category" data-gradient="3">
-                        <a href="ministry.html">
-                            <i class="fas fa-bullhorn"></i>
-                            <h3>Ministry</h3>
-                            <p>Good News replaces this world's monopoly.</p>
-                        </a>
-                    </div>
-                    <div class="category" data-gradient="4">
-                        <a href="run.html">
-                            <i class="fas fa-running"></i>
-                            <h3>Run</h3>
-                            <p>Keep pushing forward running the race.</p>
-                        </a>
-                    </div>
-                    <div class="category" data-gradient="6">
-                        <a href="wisdom.html">
-                            <i class="fas fa-shield-alt"></i>
-                            <h3>Wisdom</h3>
-                            <p>Defend against the attacks of false worship.</p>
-                        </a>
-                    </div>
-                </div>
-                <button class="carousel-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
-                <div class="carousel-dots"></div>
+            <div class="unit">
+                <a href="dig.html" class="unit-button">
+                    <i class="fas fa-gem"></i>
+                    <h3>Dig</h3>
+                    <p>Explore treasure with our mining game.</p>
+                </a>
+            </div>
+            <div class="unit">
+                <a href="ministry.html" class="unit-button">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Ministry</h3>
+                    <p>Good News replaces this world's monopoly.</p>
+                </a>
+            </div>
+            <div class="unit">
+                <a href="run.html" class="unit-button">
+                    <i class="fas fa-running"></i>
+                    <h3>Run</h3>
+                    <p>Keep pushing forward running the race.</p>
+                </a>
+            </div>
+            <div class="unit">
+                <a href="wisdom.html" class="unit-button">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Wisdom</h3>
+                    <p>Defend against the attacks of false worship.</p>
+                </a>
             </div>
         </section>
     </main>
@@ -80,72 +125,7 @@
     </footer>
 
     <script>
-        // Ensure DOM is fully loaded before initializing carousel
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.querySelector('.carousel');
-            const track = carousel.querySelector('.carousel-track');
-            const items = Array.from(carousel.querySelectorAll('.category'));
-            const prevBtn = carousel.querySelector('.carousel-prev');
-            const nextBtn = carousel.querySelector('.carousel-next');
-            const dotsContainer = carousel.querySelector('.carousel-dots');
-
-            if (!track || !items.length || !prevBtn || !nextBtn || !dotsContainer) {
-                console.error('Carousel setup failed:', { track, items: items.length, prevBtn, nextBtn, dotsContainer });
-                return;
-            }
-
-            let currentIndex = 0;
-            const totalItems = items.length;
-
-            // Set initial height
-            const updateHeight = () => {
-                const currentItem = items[currentIndex];
-                if (currentItem) {
-                    track.style.height = `${currentItem.offsetHeight}px`;
-                }
-            };
-            updateHeight();
-
-            // Create dots
-            for (let i = 0; i < totalItems; i++) {
-                const dot = document.createElement('span');
-                dot.classList.add('carousel-dot');
-                dot.setAttribute('aria-label', `Slide ${i + 1}`);
-                if (i === 0) dot.classList.add('active');
-                dotsContainer.appendChild(dot);
-            }
-            const dots = dotsContainer.querySelectorAll('.carousel-dot');
-
-            // Update carousel
-            function updateCarousel() {
-                const offset = -currentIndex * 100;
-                track.style.transform = `translateX(${offset}%)`;
-                track.style.transition = 'transform 0.5s ease';
-                dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
-                updateHeight();
-            }
-
-            // Initial update
-            updateCarousel();
-
-            // Button events
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % totalItems;
-                updateCarousel();
-            });
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-                updateCarousel();
-            });
-
-            // Dot navigation
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateCarousel();
-                });
-            });
-        });
+        // No carousel JavaScript needed for static unit buttons
     </script>
 </body>
 </html>
