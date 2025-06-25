@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News - Just Wise Love</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+  <style>
+    /* Root variables for consistent colors */
+    :root {
+      --Dark: #004800;
+      --Green: #008000;
+    }
+
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      touch-action: pan-x pan-y;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Header styles */
+    header {
+      background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo h1 {
+      font-family: 'Audiowide', Arial, sans-serif;
+      color: #000000;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    /* Main content styles */
+    main {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+    }
+
+    /* News and weather section styles */
+    .news-section,
+    .weather-section {
+      background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+      padding: 20px;
+      margin: 5px 0;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-section h2,
+    .weather-section h2 {
+      font-family: 'Audiowide', Arial, sans-serif;
+      color: #000000;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .news-section h3 {
+      font-family: 'Audiowide', Arial, sans-serif;
+      font-size: 18px;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      background: none;
+      padding: 0;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .item-content {
+      background: #000000;
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .news-section a {
+      color: var(--Green);
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      transition: color 0.3s;
+    }
+
+    .news-section a:hover {
+      color: #d4af37;
+      text-decoration: underline;
+    }
+
+    .describe {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /* Weather-specific styles */
+    .weather-box {
+      padding: 20px;
+      border-radius: 5px;
+      background: #000000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .weather-hourly,
+    .weather-daily {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .hour,
+    .day {
+      flex: 1 1 150px;
+      background: linear-gradient(90deg, var(--Dark), var(--Green));
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+      min-width: 120px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .hour:hover,
+    .day:hover {
+      transform: translateY(-5px);
+    }
+
+    .weather-icon {
+      font-size: 30px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .scripture {
+      font-style: italic;
+      color: #ffffff;
+      margin: 10px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Error message */
+    .error-message {
+      color: #d32f2f;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Footer styles */
+    footer {
+      background: linear-gradient(90deg, var(--Dark), var(--Green), var(--Dark));
+      text-align: center;
+      padding: 10px;
+      color: #000000;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .logo h1 {
+        font-size: 42px;
+      }
+
+      .news-section h2,
+      .weather-section h2 {
+        font-size: 20px;
+      }
+
+      .news-section h3 {
+        font-size: 16px;
+      }
+
+      .hour,
+      .day {
+        flex: 1 1 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <h1>NEWS</h1>
+    </a>
+  </div>
+</header>
+<main>
+  <section id="news" class="news-section">
+    <div class="item">
+      <div class="item-content">
+        <h2>News - Live</h2>
+        <div id="bbc-news"></div>
+      </div>
+    </div>
+  </section>
+  <section id="weather" class="weather-section">
+    <div class="item">
+      <div class="item-content weather-box">
+        <h2>North East, MD Weather (EST, °F)</h2>
+        <div class="scripture">Hourly Forecast (Next 12 Hours)</div>
+        <div class="weather-hourly"></div>
+        <div class="scripture">11-Day Forecast</div>
+        <div class="weather-daily"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Just Wise Love</p>
+</footer>
+<script>
+// News feed setup
+const bbcFeedUrl = "https://feeds.bbci.co.uk/news/rss.xml";
+const newsContainer = document.getElementById("bbc-news");
+
+function cleanDescription(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  let text = div.textContent || div.innerText || "";
+  return text.replace(/\s+/g, " ").trim();
+}
+
+async function fetchNews() {
+  try {
+    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(bbcFeedUrl)}`);
+    if (!res.ok) throw new Error(`Failed to fetch news: ${res.status} ${res.statusText}`);
+    const data = await res.json();
+    data.items.slice(0, 10).forEach(item => {
+      const articleDiv = document.createElement("div");
+      articleDiv.className = "item";
+      const fullDesc = cleanDescription(item.description);
+      const pubDate = new Date(item.pubDate).toLocaleString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+      articleDiv.innerHTML = `
+        <div class="item-content">
+          <h3>${item.title}</h3>
+          <p class="describe">${pubDate}</p>
+          ${item.thumbnail ? `<img src="${item.thumbnail}" alt="BBC News image">` : 
+            (item.description.match(/<img[^>]+src="([^">]+)"/)?.[1] ? 
+              `<img src="${item.description.match(/<img[^>]+src="([^">]+)"/)[1]}" alt="BBC News image">` : '')}
+          <p class="describe">${fullDesc}</p>
+          <a href="${item.link}" target="_blank" rel="noopener noreferrer">Read more</a>
+        </div>
+      `;
+      newsContainer.appendChild(articleDiv);
+    });
+  } catch (err) {
+    newsContainer.innerHTML = `<p class="error-message">Failed to load BBC News feed: ${err.message}</p>`;
+    console.error("Error loading BBC feed:", err);
+  }
+}
+
+// Weather setup
+const lat = 39.60; // North East, MD
+const lon = -75.94; // North East, MD
+const timezone = "America/New_York";
+
+const weatherIcons = {
+  0: "fa-sun", 1: "fa-sun", 2: "fa-cloud-sun", 3: "fa-cloud", 45: "fa-smog", 48: "fa-smog",
+  51: "fa-cloud-rain", 53: "fa-cloud-rain", 55: "fa-cloud-showers-heavy", 61: "fa-cloud-showers-heavy",
+  63: "fa-cloud-showers-heavy", 65: "fa-cloud-showers-heavy", 71: "fa-snowflake", 73: "fa-snowflake",
+  75: "fa-snowflake", 80: "fa-cloud-showers-heavy", 81: "fa-cloud-showers-heavy", 82: "fa-cloud-showers-heavy",
+  95: "fa-bolt", 99: "fa-bolt"
+};
+
+function cToF(c) {
+  return Math.round(c * 9/5 + 32);
+}
+
+function getIcon(code) {
+  return weatherIcons[code] || "fa-question";
+}
+
+function showHourly(hourly) {
+  const container = document.querySelector(".weather-hourly");
+  container.innerHTML = "";
+  const now = new Date();
+  const startIndex = hourly.time.findIndex(t => {
+    const dt = new Date(t);
+    return (
+      dt.getFullYear() === now.getFullYear() &&
+      dt.getMonth() === now.getMonth() &&
+      dt.getDate() === now.getDate() &&
+      dt.getHours() >= now.getHours()
+    );
+  });
+  if (startIndex === -1) {
+    container.innerHTML = "<p class='error-message'>No hourly data available for current time.</p>";
+    return;
+  }
+
+  for (let i = startIndex; i < startIndex + 12 && i < hourly.time.length; i++) {
+    const dt = new Date(hourly.time[i]);
+    const hourStr = dt.toLocaleTimeString("en-US", { hour: "numeric", hour12: true, timeZone: timezone });
+    const tempF = cToF(hourly.temperature_2m[i]);
+    const code = hourly.weathercode[i];
+    const iconClass = getIcon(code);
+    const precip = hourly.precipitation_probability[i];
+    const humidity = hourly.relativehumidity_2m[i];
+
+    const div = document.createElement("div");
+    div.className = "hour";
+    div.innerHTML = `
+      <i class="fas ${iconClass} weather-icon"></i>
+      <strong>${hourStr}</strong><br/>
+      ${tempF}°F<br/>
+      Precip: ${precip}%<br/>
+      Humidity: ${humidity}%
+    `;
+    container.appendChild(div);
+  }
+}
+
+function showDaily(daily) {
+  const container = document.querySelector(".weather-daily");
+  container.innerHTML = "";
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  
+  const startIndex = daily.time.findIndex(t => {
+    const dt = new Date(t);
+    return (
+      dt.getFullYear() === today.getFullYear() &&
+      dt.getMonth() === today.getMonth() &&
+      dt.getDate() === today.getDate()
+    );
+  });
+
+  if (startIndex === -1) {
+    container.innerHTML = "<p class='error-message'>No forecast data available for current day.</p>";
+    return;
+  }
+
+  for (let i = startIndex; i < startIndex + 11 && i < daily.time.length; i++) {
+    const dt = new Date(daily.time[i]);
+    const dayStr = dt.toLocaleDateString("en-US", { 
+      weekday: "short", 
+      month: "short", 
+      day: "numeric", 
+      timeZone: timezone 
+    });
+    const maxF = cToF(daily.temperature_2m_max[i]);
+    const minF = cToF(daily.temperature_2m_min[i]);
+    const code = daily.weathercode[i];
+    const iconClass = getIcon(code);
+    const precip = daily.precipitation_probability_max[i];
+
+    const div = document.createElement("div");
+    div.className = "day";
+    div.innerHTML = `
+      <i class="fas ${iconClass} weather-icon"></i>
+      <strong>${dayStr}</strong><br/>
+      High: ${maxF}°F<br/>
+      Low: ${minF}°F<br/>
+      Precip: ${precip}%
+    `;
+    container.appendChild(div);
+  }
+}
+
+async function fetchWithRetry(url, options, retries = 3, delay = 2000) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url, options);
+      if (!res.ok) throw new Error(`HTTP error: ${res.status} ${res.statusText}`);
+      return res;
+    } catch (e) {
+      if (i < retries - 1) {
+        console.warn(`Weather fetch attempt ${i + 1} failed: ${e.message}. Retrying in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        throw e;
+      }
+    }
+  }
+}
+
+async function fetchWeather() {
+  const weatherBox = document.querySelector(".weather-box");
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,weathercode,precipitation_probability,relativehumidity_2m&daily=temperature_2m_max,temperature_2m_min,weathercode,precipitation_probability_max&forecast_days=11¤t_weather=true&timezone=${encodeURIComponent(timezone)}`;
+    console.log("Fetching weather from:", url);
+    const res = await fetchWithRetry(url, { cache: "no-store" });
+    const data = await res.json();
+    
+    if (!data.hourly || !data.daily) {
+      throw new Error("Incomplete weather data received");
+    }
+
+    showHourly(data.hourly);
+    showDaily(data.daily);
+  } catch (e) {
+    const errorMsg = `Weather data not available: ${e.message}. Please check your connection or try again later.`;
+    weatherBox.innerHTML += `<p class="error-message">${errorMsg}</p>`;
+    console.error("Weather fetch error:", e);
+  }
+}
+
+// Run all
+fetchNews();
+fetchWeather();
+</script>
+</body>
+</html>
